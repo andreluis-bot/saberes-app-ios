@@ -38,10 +38,10 @@
 "FACEBOOK" = "Facebook";
 "MICROSOFT" = "Microsoft";
 "OR" = "Ou";
-"STARTUP.INFO_MESSAGE" = "Cursos e programas das melhores universidades do mundo no seu bolso.";
-"STARTUP.SEARCH_TITLE" = "O que você quer aprender?";
-"STARTUP.SEARCH_PLACEHOLDER" = "Pesquise nossos mais de 3.000 cursos";
-"STARTUP.EXPLORE_ALL_COURSES" = "Explorar todos os cursos";
+"STARTUP.INFO_MESSAGE" = "Cursos gratuitos da UNESP em Segurança Alimentar e Nutricional, no seu bolso.";
+"STARTUP.SEARCH_TITLE" = "O que você quer aprender hoje?";
+"STARTUP.SEARCH_PLACEHOLDER" = "Busque um curso";
+"STARTUP.EXPLORE_ALL_COURSES" = "Ver todos os cursos";
 "STARTUP.TITLE" = "Comece";
 "LEARNING_SITES.TITLE" = "Sites de Aprendizagem";
 "LEARNING_SITES.GET_STARTED" = "Começar";

@@ -4,7 +4,7 @@
 "MAINSCREEN.PROGRAMS" = "Programas";
 "MAINSCREEN.PROFILE" = "Perfil";
 "MAINSCREEN.LEARN" = "Aprender";
-"MAINSCREEN.SOCIAL_REGISTER_BANNER" = "Você já configurou uma %@ Conta com sua %@ Conta. Você entrou com essa Conta.";
+"MAINSCREEN.SOCIAL_REGISTER_BANNER" = "Você já tinha uma conta no %@ ligada à sua conta %@ e entrou com ela.";
 "VIEW.SNACKBAR.TRY_AGAIN_BTN" = "Tente novamente";
 "ERROR.INVALID_CREDENTIALS" = "Credenciais inválidas";
 "ERROR.SLOW_OR_NO_INTERNET_CONNECTION" = "Conexão lenta ou sem internet";
@@ -85,7 +85,7 @@
 "WEBVIEW.ALERT.OK" = "Ok";
 "WEBVIEW.ALERT.CANCEL" = "Cancelar";
 "WEBVIEW.ALERT.CONTINUE" = "Continuar";
-"REVIEW.VOTE_TITLE" = "Gostando do Open edX?";
+"REVIEW.VOTE_TITLE" = "Está gostando do Saberes?";
 "REVIEW.VOTE_DESCRIPTION" = "Seu feedback é importante para nós. Você poderia avaliar o aplicativo tocando em uma estrela abaixo? Obrigado por seu apoio!";
 "REVIEW.FEEDBACK_TITLE" = "Deixe seu Feedback";
 "REVIEW.FEEDBACK_DESCRIPTION" = "Lamentamos saber que sua experiência de aprendizado teve alguns problemas. Agradecemos todo o feedback.";

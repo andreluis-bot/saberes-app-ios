@@ -5,7 +5,7 @@
 "SEARCH.TITLE" = "Resultados da pesquisa";
 "SEARCH.EMPTY_DESCRIPTION" = "Comece a digitar para encontrar o curso";
 "UPDATE_REQUIRED_TITLE" = "Atualização do aplicativo necessária";
-"UPDATE_REQUIRED_DESCRIPTION" = "Esta versão do aplicativo OpenEdX está desatualizada. Para continuar aprendendo e obter as funcionalidades e correções mais recentes, atualize para a versão mais recente.";
+"UPDATE_REQUIRED_DESCRIPTION" = "Esta versão do app Saberes está desatualizada. Para continuar estudando e receber as novidades e correções, atualize para a versão mais recente.";
 "UPDATE_WHY_NEED" = "Por que preciso atualizar?";
 "UPDATE_DEPRECATED_APP" = "Versão obsoleta do aplicativo";
 "UPDATE_BUTTON" = "Atualizar";
