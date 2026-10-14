@@ -13,7 +13,7 @@ jobs:
     runs-on: macos-26
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Xcode 26
         run: |
@@ -23,11 +23,6 @@ jobs:
           sudo xcode-select -s "$X"
           xcodebuild -version
 
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-
       - name: Tradução oficial pt_BR (openedx-translations)
         continue-on-error: true
         run: |
@@ -36,7 +31,9 @@ jobs:
           make pull_translations ATLAS_OPTIONS=--filter=pt_BR
 
       - name: Dependências (CocoaPods)
-        run: bundle exec pod install
+        run: |
+          pod --version 2>/dev/null | grep -qx 1.16.2 || sudo gem install cocoapods -v 1.16.2 --no-document
+          pod install
 
       - name: Compilar para o simulador
         run: |
@@ -51,7 +48,7 @@ jobs:
           ls
           ditto -c -k --sequesterRsrc --keepParent "$(ls -d *.app | head -1)" "$GITHUB_WORKSPACE/Saberes-simulador.zip"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: saberes-ios-simulador
           path: Saberes-simulador.zip
