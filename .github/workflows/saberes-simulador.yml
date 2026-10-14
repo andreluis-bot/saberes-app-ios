@@ -32,12 +32,14 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild -workspace OpenEdX.xcworkspace -scheme OpenEdXProd -configuration DebugProd \
-            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO -skipPackagePluginValidation -skipMacroValidation build | tail -60
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/dd" \
+            CODE_SIGNING_ALLOWED=NO -skipPackagePluginValidation -skipMacroValidation build > "$RUNNER_TEMP/xcodebuild.log" 2>&1 \
+            || { grep -E '(error|warning): ' "$RUNNER_TEMP/xcodebuild.log" | grep -vE 'deployment target|Run script build phase|Copy Headers|duplicate build file' | sort -u | head -80; tail -40 "$RUNNER_TEMP/xcodebuild.log"; exit 1; }
+          tail -5 "$RUNNER_TEMP/xcodebuild.log"
 
       - name: Empacotar o .app
         run: |
-          cd build/Build/Products/DebugProd-iphonesimulator
+          cd "$RUNNER_TEMP/dd/Build/Products/DebugProd-iphonesimulator"
           ls
           ditto -c -k --sequesterRsrc --keepParent "$(ls -d *.app | head -1)" "$GITHUB_WORKSPACE/Saberes-simulador.zip"
 
@@ -46,3 +48,11 @@ jobs:
           name: saberes-ios-simulador
           path: Saberes-simulador.zip
           retention-days: 14
+
+      - name: Log da compilação (se falhar)
+        if: failure()
+        uses: actions/upload-artifact@v5
+        with:
+          name: xcodebuild-log
+          path: ${{ runner.temp }}/xcodebuild.log
+          retention-days: 7
