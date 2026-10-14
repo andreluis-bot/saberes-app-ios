@@ -77,7 +77,6 @@
 		0C01007F0E8CEDCD293E0A68 /* Pods-App-WhatsNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.debug.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.debug.xcconfig"; sourceTree = "<group>"; };
 		14769D3D2B99713800AB36D4 /* WhatsNewAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewAnalytics.swift; sourceTree = "<group>"; };
 		1E3F4487E7D3A48F5FD12DDA /* Pods-App-WhatsNew-WhatsNewTests.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.releasestage.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.releasestage.xcconfig"; sourceTree = "<group>"; };
-		3494482AAC5C8A7DD1EE8842 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		34C1F2BEAF7F0DCB8E630F33 /* Pods-App-WhatsNew.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.releasestage.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.releasestage.xcconfig"; sourceTree = "<group>"; };
 		365FD817D70DFBCBDE2EAE5F /* Pods-App-WhatsNew-WhatsNewTests.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		4CB92C9DBA730A1B06B076BA /* Pods-App-WhatsNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.release.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		6F50A409FBCCC7C08712A25E /* Pods-App-WhatsNew.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.debugdev.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.debugdev.xcconfig"; sourceTree = "<group>"; };
 		9176CDC000731B73D2F10372 /* Pods-App-WhatsNew.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.debugstage.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.debugstage.xcconfig"; sourceTree = "<group>"; };
 		9844714991FA40ECDC228CC9 /* Pods-App-WhatsNew.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.releasedev.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.releasedev.xcconfig"; sourceTree = "<group>"; };
+		9BF94E239F509928E646EB4A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A2CABA11F5E7F89EFD9A05AC /* Pods-App-WhatsNew-WhatsNewTests.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.debugstage.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.debugstage.xcconfig"; sourceTree = "<group>"; };
 		A557A3CED4D6327AAE6AA02C /* Pods-App-WhatsNew-WhatsNewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.release.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.release.xcconfig"; sourceTree = "<group>"; };
 		A5B468152F29DFCB002A4ECA /* WhatsNewMocks.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewMocks.generated.swift; sourceTree = "<group>"; };
@@ -484,7 +484,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02E6407D2ADFF6250079AEDA /* en */,
-				3494482AAC5C8A7DD1EE8842 /* pt-BR */,
+				9BF94E239F509928E646EB4A /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

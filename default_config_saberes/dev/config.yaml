@@ -19,6 +19,11 @@ UI_COMPONENTS:
   SAML_SSO_LOGIN_ENABLED: false
   SAML_SSO_DEFAULT_LOGIN_BUTTON: false
 IS_SWITCH_INSTANCE_LOGIN_ENABLED: false
+PRE_LOGIN_EXPERIENCE_ENABLED: true
+DISCOVERY:
+  TYPE: native
+DASHBOARD:
+  TYPE: gallery
 AGREEMENT_URLS:
   PRIVACY_POLICY_URL: http://local.openedx.io/privacy
   COOKIE_POLICY_URL: http://local.openedx.io/privacy#cookies
