@@ -23,13 +23,6 @@ jobs:
           sudo xcode-select -s "$X"
           xcodebuild -version
 
-      - name: Tradução oficial pt_BR (openedx-translations)
-        continue-on-error: true
-        run: |
-          python3 -m venv /tmp/i18n && . /tmp/i18n/bin/activate
-          pip install -q -r i18n_scripts/requirements.txt
-          make pull_translations ATLAS_OPTIONS=--filter=pt_BR
-
       - name: Dependências (CocoaPods)
         run: |
           pod --version 2>/dev/null | grep -qx 1.16.2 || sudo gem install cocoapods -v 1.16.2 --no-document

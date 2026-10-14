@@ -1,0 +1,12 @@
+/*  Combined English Source for Open edX iOS  */
+"DATES.TITLE" = "Datas";
+"DATES.PAST_DUE" = "Expirada";
+"DATES.TODAY" = "Hoje";
+"DATES.THIS_WEEK" = "Esta Semana";
+"DATES.NEXT_WEEK" = "Próxima Semana";
+"DATES.UPCOMING" = "Próximo";
+"EMPTY.TITLE" = "Não há Datas";
+"EMPTY.SUBTITLE" = "Você não tem cursos ativos com eventos agendados no momento. Matricule-se em um curso para ver datas e prazos importantes.";
+"SHIFT_DUE_DATES.TITLE" = "Você perdeu alguns prazos?";
+"SHIFT_DUE_DATES.DESCRIPTION" = "Não se preocupe - ajuste nosso cronograma sugerido para concluir as atribuições pendentes sem perder nenhum progresso.";
+"SHIFT_DUE_DATES.BUTTON" = "Alterar Datas de Entrega";

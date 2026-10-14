@@ -77,6 +77,7 @@
 		AFC846633FC6ED95F9884DE0 /* Pods-App-AppDates-AppDatesTests.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates-AppDatesTests.releasedev.xcconfig"; path = "Target Support Files/Pods-App-AppDates-AppDatesTests/Pods-App-AppDates-AppDatesTests.releasedev.xcconfig"; sourceTree = "<group>"; };
 		B3A97A12BDD649309E86E47F /* Pods-App-AppDates.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.releasestage.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.releasestage.xcconfig"; sourceTree = "<group>"; };
 		B425DC0B44831EA155630C1D /* Pods-App-AppDates.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.debugstage.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.debugstage.xcconfig"; sourceTree = "<group>"; };
+		C1564A1B92C61EAEA08570AF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CC47B8A74F999FBDA6DC2597 /* Pods-App-AppDates-AppDatesTests.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates-AppDatesTests.debugprod.xcconfig"; path = "Target Support Files/Pods-App-AppDates-AppDatesTests/Pods-App-AppDates-AppDatesTests.debugprod.xcconfig"; sourceTree = "<group>"; };
 		CE815A5E2D60D75200CB9114 /* AppDates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppDates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE815A662D60D75200CB9114 /* AppDatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,7 +377,7 @@
 			mainGroup = CE815A542D60D75200CB9114;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */,
+				CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "" */,
 			);
 			productRefGroup = CE815A5F2D60D75200CB9114 /* Products */;
 			projectDirPath = "";
@@ -520,6 +521,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE86499E2DA57A1C00821EC9 /* en */,
+				C1564A1B92C61EAEA08570AF /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1578,7 +1580,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */ = {
+		CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/openedx/openedx-app-foundation-ios/";
 			requirement = {
@@ -1591,12 +1593,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		CE815A7D2D60D7CC00CB9114 /* OEXFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */;
+			package = CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "" */;
 			productName = OEXFoundation;
 		};
 		CE815A9B2D60DB8A00CB9114 /* OEXFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */;
+			package = CE815A7C2D60D7CC00CB9114 /* XCRemoteSwiftPackageReference "" */;
 			productName = OEXFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */

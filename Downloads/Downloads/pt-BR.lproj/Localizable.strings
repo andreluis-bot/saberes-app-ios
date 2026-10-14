@@ -1,0 +1,12 @@
+"DOWNLOADS.TITLE" = "Transferências";
+"DOWNLOADS.MANAGE_DOWNLOAD_SETTINGS" = "Gerencie as Configurações de Baixar";
+"DOWNLOADS.NO_COURSES_TO_DOWNLOAD.TITLE" = "Nenhum curso com Conteúdo para baixar";
+"DOWNLOADS.NO_COURSES_TO_DOWNLOAD.DESCRIPTION" = "No momento você não tem cursos com conteúdo para baixar.";
+"DOWNLOADS.CELL.DOWNLOADED" = "%@ baixado";
+"DOWNLOADS.CELL.ALL_DOWNLOADED" = "Todos %@ baixados";
+"DOWNLOADS.CELL.AVAILABLE" = "%@ disponível";
+"DOWNLOADS.CELL.DOWNLOAD_COURSE" = "Baixar curso";
+"DOWNLOADS.CELL.DOWNLOADING" = "Baixando";
+"DOWNLOADS.CELL.LOADING_COURSE_STRUCTURE" = "Carregando estrutura do curso...";
+"MENU_OPTION.REMOVE" = "Remova baixar de cursos";
+"MENU_OPTION.CANCEL" = "Cancelar o download";

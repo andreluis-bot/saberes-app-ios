@@ -142,6 +142,7 @@
 		23F5E05C0D7EC044B0C9E719 /* Pods-App-OpenEdX.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.debugstage.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.debugstage.xcconfig"; sourceTree = "<group>"; };
 		2C04239322282B0E6963D56B /* Pods-App-OpenEdX.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.debugdev.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.debugdev.xcconfig"; sourceTree = "<group>"; };
 		58FAA9E3ECC93D0E638D877D /* Pods_App_OpenEdX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_OpenEdX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6B484DAC34D608DC5D6FCF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6EAAEFD45AC766684492B1F7 /* Pods-App-OpenEdX.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.releasestage.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.releasestage.xcconfig"; sourceTree = "<group>"; };
 		84185F0B853BA4F0A8C0217C /* Pods-App-OpenEdX.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		8A39EAD8663E6F16A59AF82E /* Pods-App-OpenEdX.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.releasedev.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.releasedev.xcconfig"; sourceTree = "<group>"; };
@@ -449,7 +450,7 @@
 			);
 			mainGroup = 07D5DA2828D075AA00752FD9;
 			packageReferences = (
-				CE9C07D62CD104E5009C44D1 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */,
+				CE9C07D62CD104E5009C44D1 /* XCRemoteSwiftPackageReference "" */,
 				CE924BE52CD8FAB3000137CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CE0BF0B82CD9203A00D10289 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */,
 				CEBA52752CEBB69100619E2B /* XCRemoteSwiftPackageReference "openedx-app-firebase-analytics-ios" */,
@@ -627,6 +628,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0770DE6528D0BCC7006D8A5D /* en */,
+				5A6B484DAC34D608DC5D6FCF /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1164,7 +1166,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.interssan.saberes;
-				PRODUCT_NAME = "Saberes";
+				PRODUCT_NAME = Saberes;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1202,7 +1204,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.interssan.saberes;
-				PRODUCT_NAME = "Saberes";
+				PRODUCT_NAME = Saberes;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1260,7 +1262,7 @@
 				version = 11.3.0;
 			};
 		};
-		CE9C07D62CD104E5009C44D1 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */ = {
+		CE9C07D62CD104E5009C44D1 /* XCRemoteSwiftPackageReference "" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/openedx/openedx-app-foundation-ios/";
 			requirement = {
@@ -1291,7 +1293,7 @@
 		};
 		CE9C07D72CD104E5009C44D1 /* OEXFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE9C07D62CD104E5009C44D1 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */;
+			package = CE9C07D62CD104E5009C44D1 /* XCRemoteSwiftPackageReference "" */;
 			productName = OEXFoundation;
 		};
 		CEBA52762CEBB69100619E2B /* OEXFirebaseAnalytics */ = {
