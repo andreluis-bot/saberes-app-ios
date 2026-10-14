@@ -29,10 +29,11 @@ jobs:
           bundler-cache: true
 
       - name: Tradução oficial pt_BR (openedx-translations)
+        continue-on-error: true
         run: |
-          python3 -m pip install --user -r i18n_scripts/requirements.txt
-          export PATH="$(python3 -m site --user-base)/bin:$PATH"
-          make pull_translations
+          python3 -m venv /tmp/i18n && . /tmp/i18n/bin/activate
+          pip install -q -r i18n_scripts/requirements.txt
+          make pull_translations ATLAS_OPTIONS=--filter=pt_BR
 
       - name: Dependências (CocoaPods)
         run: bundle exec pod install
