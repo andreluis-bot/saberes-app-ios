@@ -1,0 +1,496 @@
+//
+//  CustomDisclosureGroup.swift
+//  Course
+//
+//  Created by  Stepanok Ivan on 21.05.2024.
+//
+
+import SwiftUI
+import Core
+import Theme
+
+struct CustomDisclosureGroup: View {
+    private let proxyWidth: CGFloat
+    private let course: CourseStructure
+    private let viewModel: CourseContainerViewModel
+    private let idiom: UIUserInterfaceIdiom
+    
+    init(course: CourseStructure, proxy: GeometryProxy, viewModel: CourseContainerViewModel) {
+        self.course = course
+        self.proxyWidth = proxy.size.width
+        self.viewModel = viewModel
+        self.idiom = UIDevice.current.userInterfaceIdiom
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            ForEach(Array(course.childs.enumerated()), id: \.element.id) { chapterIndex, chapter in
+                ChapterRowView(
+                    chapter: chapter,
+                    chapterIndex: chapterIndex,
+                    course: course,
+                    proxyWidth: proxyWidth,
+                    idiom: idiom,
+                    viewModel: viewModel
+                )
+            }
+        }
+        .padding(.horizontal, 24)
+        .padding(.vertical, 8)
+    }
+}
+
+// MARK: - Chapter Row 
+private struct ChapterRowView: View {
+    let chapter: CourseChapter
+    let chapterIndex: Int
+    let course: CourseStructure
+    let proxyWidth: CGFloat
+    let idiom: UIUserInterfaceIdiom
+    let viewModel: CourseContainerViewModel
+    
+    private var isExpanded: Bool {
+        viewModel.expandedSections[chapter.id] ?? false
+    }
+    
+    private var isChapterCompleted: Bool {
+        chapter.childs.allSatisfy { $0.completion == 1 }
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            SectionProgressView(progress: viewModel.chapterProgress(for: chapter))
+                .padding(.horizontal, -16)
+                .padding(.top, -12)
+            
+            Button(
+                action: {
+                    withAnimation(.linear(duration: course.childs.count > 1 ? 0.2 : 0.05)) {
+                        viewModel.expandedSections[chapter.id, default: false].toggle()
+                    }
+                    viewModel.trackSectionClicked(chapter)
+                }, label: {
+                    HStack {
+                        CoreAssets.chevronRight.swiftUIImage
+                            .rotationEffect(
+                                .degrees(isExpanded ? -90 : 90)
+                            )
+                            .foregroundColor(Theme.Colors.textPrimary)
+                        if isChapterCompleted {
+                            CoreAssets.finishedSequence.swiftUIImage.renderingMode(.template)
+                                .foregroundColor(Theme.Colors.success)
+                        }
+                        Text(chapter.displayName)
+                            .font(Theme.Fonts.titleMedium)
+                            .foregroundColor(Theme.Colors.textPrimary)
+                            .lineLimit(1)
+                        Spacer()
+                        if let state = downloadAllButtonState {
+                            Button(
+                                action: {
+                                    downloadAllSubsections(state: state)
+                                }, label: {
+                                    switch state {
+                                    case .available:
+                                        DownloadAvailableView()
+                                    case .downloading:
+                                        DownloadProgressView()
+                                    case .finished:
+                                        DownloadFinishedView()
+                                    }
+                                    
+                                }
+                            )
+                        }
+                    }
+                }
+            )
+            .padding(.top, 8)
+            if isExpanded {
+                VStack(alignment: .leading) {
+                    ForEach(Array(chapter.childs.enumerated()), id: \.element.id) { sequentialIndex, sequential in
+                        SequentialRowView(
+                            sequential: sequential,
+                            sequentialIndex: sequentialIndex,
+                            chapterIndex: chapterIndex,
+                            course: course,
+                            proxyWidth: proxyWidth,
+                            idiom: idiom,
+                            viewModel: viewModel
+                        )
+                    }
+                }
+                .padding(.top, 8)
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 6)
+                .fill(Theme.Colors.datesSectionBackground)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(style: .init(lineWidth: 1, lineCap: .round, lineJoin: .round, miterLimit: 1))
+                .foregroundColor(Theme.Colors.cardViewStroke)
+        )
+    }
+    
+    private var downloadAllButtonState: DownloadViewState? {
+        guard canDownloadAllSections else { return nil }
+        
+        var downloads: [DownloadViewState] = []
+        for sequential in chapter.childs {
+            if let state = viewModel.sequentialsDownloadState[sequential.id] {
+                downloads.append(state)
+            }
+        }
+        if downloads.contains(.downloading) {
+            return .downloading
+        } else if downloads.allSatisfy({ $0 == .finished }) {
+            return .finished
+        } else {
+            return .available
+        }
+    }
+    
+    private var canDownloadAllSections: Bool {
+        chapter.childs.contains { sequential in
+            viewModel.sequentialsDownloadState[sequential.id] != nil
+        }
+    }
+    
+    private func downloadAllSubsections(state: DownloadViewState) {
+        Task {
+            var allBlocks: [CourseBlock] = []
+            var sequentialsToDownload: [CourseSequential] = []
+            for sequential in chapter.childs {
+                let blocks = await viewModel.collectBlocks(
+                    chapter: chapter,
+                    blockId: sequential.id,
+                    state: state
+                )
+                if !blocks.isEmpty {
+                    allBlocks.append(contentsOf: blocks)
+                    sequentialsToDownload.append(sequential)
+                }
+            }
+            await viewModel.download(
+                state: state,
+                blocks: allBlocks,
+                sequentials: sequentialsToDownload
+            )
+        }
+    }
+}
+
+// MARK: - Sequential Row
+private struct SequentialRowView: View {
+    let sequential: CourseSequential
+    let sequentialIndex: Int
+    let chapterIndex: Int
+    let course: CourseStructure
+    let proxyWidth: CGFloat
+    let idiom: UIUserInterfaceIdiom
+    let viewModel: CourseContainerViewModel
+    
+    private var maxWidth: CGFloat {
+        idiom == .pad ? proxyWidth * 0.5 : proxyWidth * 0.6
+    }
+    
+    private var assignmentText: String? {
+        var parts: [String] = []
+
+        if let name = sequential.sequentialProgress?.assignmentType,
+           !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            parts.append(name)
+        }
+
+        if let due = sequential.due {
+            parts.append(getAssignmentStatus(for: due))
+        }
+
+        if let sp = sequential.sequentialProgress,
+           let earned = sp.numPointsEarned,
+           let possible = sp.numPointsPossible,
+           possible != 0 {
+            parts.append("\(earned) / \(possible)")
+        }
+
+        return parts.isEmpty ? nil : parts.joined(separator: " - ")
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Button(
+                action: {
+                    guard let courseVertical = sequential.childs.first else { return }
+                    guard let block = courseVertical.childs.first else {
+                        viewModel.router.showGatedContentError(url: courseVertical.webUrl)
+                        return
+                    }
+
+                    viewModel.trackSequentialClicked(sequential)
+                    if viewModel.config.uiComponents.courseDropDownNavigationEnabled {
+                        viewModel.router.showCourseUnit(
+                            courseName: viewModel.courseStructure?.displayName ?? "",
+                            blockId: block.id,
+                            courseID: viewModel.courseStructure?.id ?? "",
+                            verticalIndex: 0,
+                            chapters: course.childs,
+                            chapterIndex: chapterIndex,
+                            sequentialIndex: sequentialIndex,
+                            showVideoNavigation: false,
+                            courseVideoStructure: nil
+                        )
+                    } else {
+                        viewModel.router.showCourseVerticalView(
+                            courseID: viewModel.courseStructure?.id ?? "",
+                            courseName: viewModel.courseStructure?.displayName ?? "",
+                            title: sequential.displayName,
+                            chapters: course.childs,
+                            chapterIndex: chapterIndex,
+                            sequentialIndex: sequentialIndex
+                        )
+                    }
+                },
+                label: {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                if sequential.completion == 1 {
+                                    CoreAssets.finishedSequence.swiftUIImage
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .foregroundColor(Theme.Colors.success)
+                                        .frame(width: 20, height: 20)
+                                } else {
+                                    sequential.type.image
+                                }
+                                Text(sequential.displayName)
+                                    .font(Theme.Fonts.titleSmall)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(1)
+                                    .frame(
+                                        maxWidth: maxWidth,
+                                        alignment: .leading
+                                    )
+                            }
+                            if let assignmentText {
+                                Text(assignmentText)
+                                    .font(Theme.Fonts.bodySmall)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(2)
+                            }
+                        }
+                        .foregroundColor(Theme.Colors.textPrimary)
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityLabel(sequential.displayName)
+                        Spacer()
+                        if sequential.due != nil {
+                            CoreAssets.chevronRight.swiftUIImage
+                                .foregroundColor(Theme.Colors.textPrimary)
+                        }
+                    }
+                    .contentShape(Rectangle())
+                }
+            )
+            .padding(.vertical, 4)
+        }
+    }
+    
+    private func getAssignmentStatus(for date: Date) -> String {
+        let calendar = Calendar.current
+        let today = Date()
+        
+        if calendar.isDateInToday(date) {
+            return CourseLocalization.Course.dueToday
+        } else if calendar.isDateInTomorrow(date) {
+            return CourseLocalization.Course.dueTomorrow
+        } else if let daysUntil = calendar.dateComponents([.day], from: today, to: date).day, daysUntil > 0 {
+            return CourseLocalization.dueIn(daysUntil)
+        } else if let daysAgo = calendar.dateComponents([.day], from: date, to: today).day, daysAgo > 0 {
+            return CourseLocalization.pastDue(daysAgo)
+        } else {
+            return ""
+        }
+    }
+}
+
+#if DEBUG
+struct CustomDisclosureGroup_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        // Sample data models
+        let sampleCourseChapters: [CourseChapter] = [
+            CourseChapter(
+                blockId: "1",
+                id: "1",
+                displayName: "Chapter 1",
+                type: .chapter,
+                childs: [
+                    CourseSequential(
+                        blockId: "1-1",
+                        id: "1-1",
+                        displayName: "Sequential 1",
+                        type: .sequential,
+                        completion: 0,
+                        childs: [
+                            CourseVertical(
+                                blockId: "1-1-1",
+                                id: "1-1-1",
+                                courseId: "1",
+                                displayName: "Vertical 1",
+                                type: .vertical,
+                                completion: 0,
+                                childs: [],
+                                webUrl: ""
+                            ),
+                            CourseVertical(
+                                blockId: "1-1-2",
+                                id: "1-1-2",
+                                courseId: "1",
+                                displayName: "Vertical 2",
+                                type: .vertical,
+                                completion: 1.0,
+                                childs: [],
+                                webUrl: ""
+                            )
+                        ],
+                        sequentialProgress: SequentialProgress(
+                            assignmentType: "Advanced Assessment Tools",
+                            numPointsEarned: 1,
+                            numPointsPossible: 3,
+                            shortLabel: nil
+                        ),
+                        due: Date()
+                    ),
+                    CourseSequential(
+                        blockId: "1-2",
+                        id: "1-2",
+                        displayName: "Sequential 2",
+                        type: .sequential,
+                        completion: 1.0,
+                        childs: [
+                            CourseVertical(
+                                blockId: "1-2-1",
+                                id: "1-2-1",
+                                courseId: "1",
+                                displayName: "Vertical 3",
+                                type: .vertical,
+                                completion: 1.0,
+                                childs: [],
+                                webUrl: ""
+                            )
+                        ],
+                        sequentialProgress: SequentialProgress(
+                            assignmentType: "Basic Assessment Tools",
+                            numPointsEarned: 1,
+                            numPointsPossible: 3,
+                            shortLabel: nil
+                        ),
+                        due: Date()
+                    )
+                ]
+            ),
+            CourseChapter(
+                blockId: "2",
+                id: "2",
+                displayName: "Chapter 2",
+                type: .chapter,
+                childs: [
+                    CourseSequential(
+                        blockId: "2-1",
+                        id: "2-1",
+                        displayName: "Sequential 3",
+                        type: .sequential,
+                        completion: 1.0,
+                        childs: [
+                            CourseVertical(
+                                blockId: "2-1-1",
+                                id: "2-1-1",
+                                courseId: "2",
+                                displayName: "Vertical 4",
+                                type: .vertical,
+                                completion: 1.0,
+                                childs: [],
+                                webUrl: ""
+                            ),
+                            CourseVertical(
+                                blockId: "2-1-2",
+                                id: "2-1-2",
+                                courseId: "2",
+                                displayName: "Vertical 5",
+                                type: .vertical,
+                                completion: 1.0,
+                                childs: [],
+                                webUrl: ""
+                            )
+                        ],
+                        sequentialProgress: SequentialProgress(
+                            assignmentType: "Advanced Assessment Tools",
+                            numPointsEarned: 1,
+                            numPointsPossible: 3,
+                            shortLabel: nil
+                        ),
+                        due: Date()
+                    )
+                ]
+            )
+        ]
+        
+        let viewModel = CourseContainerViewModel(
+            interactor: CourseInteractor.mock,
+            authInteractor: AuthInteractor.mock,
+            router: CourseRouterMock(),
+            analytics: CourseAnalyticsMock(),
+            config: ConfigMock(),
+            connectivity: Connectivity(config: ConfigMock()),
+            manager: DownloadManagerMock(),
+            storage: CourseStorageMock(),
+            isActive: true,
+            courseStart: Date(),
+            courseEnd: nil,
+            enrollmentStart: Date(),
+            enrollmentEnd: nil,
+            lastVisitedBlockID: nil,
+            coreAnalytics: CoreAnalyticsMock(),
+            courseHelper: CourseDownloadHelper(courseStructure: nil, manager: DownloadManagerMock())
+        )
+        Task {
+            await withTaskGroup(of: Void.self) { group in
+                group.addTask {
+                    await viewModel.getCourseBlocks(courseID: "courseId")
+                }
+                group.addTask {
+                    await viewModel.getCourseDeadlineInfo(courseID: "courseId")
+                }
+            }
+        }
+        
+        return GeometryReader { proxy in
+            ScrollView {
+                CustomDisclosureGroup(
+                    course: CourseStructure(
+                        id: "Id",
+                        graded: false,
+                        completion: 0,
+                        viewYouTubeUrl: "",
+                        encodedVideo: "",
+                        displayName: "Course",
+                        childs: sampleCourseChapters,
+                        media: CourseMedia.init(image: CourseImage(raw: "", small: "", large: "")),
+                        certificate: nil,
+                        org: "org",
+                        isSelfPaced: false,
+                        courseProgress: nil
+                    ),
+                    proxy: proxy,
+                    viewModel: viewModel
+                )
+            }
+        }
+    }
+}
+#endif

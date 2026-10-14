@@ -1,0 +1,214 @@
+//
+//  CourseNavigationView.swift
+//  Course
+//
+//  Created by  Stepanok Ivan on 14.02.2023.
+//
+
+import SwiftUI
+import Core
+import Combine
+
+struct CourseNavigationView: View {
+    
+    private var viewModel: CourseUnitViewModel
+    private let playerStateSubject: CurrentValueSubject<VideoPlayerState?, Never>
+
+    init(
+        viewModel: CourseUnitViewModel,
+        playerStateSubject: CurrentValueSubject<VideoPlayerState?, Never>
+    ) {
+        self.viewModel = viewModel
+        self.playerStateSubject = playerStateSubject
+    }
+    
+    var body: some View {
+        HStack(alignment: .top, spacing: 16) {
+            if viewModel.selectedLesson() == viewModel.verticals[viewModel.verticalIndex].childs.first
+                && viewModel.verticals[viewModel.verticalIndex].childs.count != 1 && !viewModel.showVideoNavigation {
+                nextBigButton
+                    .frame(width: 215)
+            } else if viewModel.showVideoNavigation {
+
+                if let index = viewModel.currentVideoIndex, index != 0 {
+                    previousButtonVideoNavigation
+                }
+
+                if let index = viewModel.currentVideoIndex, index != viewModel.allVideosForNavigation.count - 1 {
+                    nextButtonVideoNavigation
+                }
+
+            } else {
+                if viewModel.selectedLesson() == viewModel.verticals[viewModel.verticalIndex].childs.last {
+                    if viewModel.selectedLesson() != viewModel.verticals[viewModel.verticalIndex].childs.first {
+                        prevButton
+                    }
+                    lastButton
+                } else {
+                    if viewModel.selectedLesson() != viewModel.verticals[viewModel.verticalIndex].childs.first {
+                        prevButton
+                    }
+                    
+                    nextButton
+                }
+            }
+        }.padding(.horizontal, 24)
+    }
+
+    private var nextButtonVideoNavigation: some View {
+        UnitButtonView(
+            type: .next,
+            isVerticalNavigation: false,
+            action: {
+                if let index = viewModel.currentVideoIndex, index != viewModel.allVideosForNavigation.count - 1 {
+                    playerStateSubject.send(VideoPlayerState.kill)
+                    let video = viewModel.allVideosForNavigation[index + 1]
+                    viewModel.handleVideoTap(video: video)
+                }
+            }
+        )
+    }
+
+    private var previousButtonVideoNavigation: some View {
+        UnitButtonView(
+            type: .previous,
+            isVerticalNavigation: false,
+            action: {
+                if let index = viewModel.currentVideoIndex, index != 0 {
+                    playerStateSubject.send(VideoPlayerState.kill)
+                    let video = viewModel.allVideosForNavigation[index - 1]
+                    viewModel.handleVideoTap(video: video)
+                }
+            }
+        )
+        .accessibilityLabel(Text(CourseLocalization.Courseware.previousFull))
+    }
+
+    private var nextBigButton: some View {
+        UnitButtonView(
+            type: .nextBig,
+            isVerticalNavigation: !viewModel.courseUnitProgressEnabled,
+            action: {
+                playerStateSubject.send(VideoPlayerState.pause)
+                viewModel.select(move: .next)
+            }
+        )
+    }
+    
+    private var nextButton: some View {
+        UnitButtonView(
+            type: .next,
+            isVerticalNavigation: !viewModel.courseUnitProgressEnabled,
+            action: {
+                playerStateSubject.send(VideoPlayerState.pause)
+                viewModel.select(move: .next)
+            }
+        )
+    }
+    
+    private var prevButton: some View {
+        UnitButtonView(
+            type: .previous,
+            isVerticalNavigation: !viewModel.courseUnitProgressEnabled,
+            action: {
+                playerStateSubject.send(VideoPlayerState.pause)
+                viewModel.select(move: .previous)
+            }
+        )
+    }
+    
+    private var lastButton: some View {
+        UnitButtonView(
+            type: .last,
+            isVerticalNavigation: !viewModel.courseUnitProgressEnabled,
+            action: {
+                let currentVertical = viewModel.verticals[viewModel.verticalIndex]
+                
+                viewModel.router.presentAlert(
+                    alertTitle: CourseLocalization.Courseware.goodWork,
+                    alertMessage: (CoreLocalization.Courseware.sectionCompleted(currentVertical.displayName)),
+                    nextSectionName: {
+                        if let data = viewModel.nextData,
+                           let vertical = viewModel.vertical(for: data) {
+                            return vertical.displayName
+                        }
+                        return nil
+                    }(),
+                    action: CourseLocalization.Courseware.backToOutline,
+                    image: CoreAssets.goodWork.swiftUIImage,
+                    onCloseTapped: { viewModel.router.dismiss(animated: false) },
+                    firstButtonTapped: {
+                        playerStateSubject.send(VideoPlayerState.pause)
+                        playerStateSubject.send(VideoPlayerState.kill)
+                        
+                        viewModel.trackFinishVerticalBackToOutlineClicked()
+                        viewModel.router.dismiss(animated: false)
+                        viewModel.router.back(animated: true)
+                    },
+                    nextSectionTapped: {
+                        playerStateSubject.send(VideoPlayerState.pause)
+                        playerStateSubject.send(VideoPlayerState.kill)
+                        viewModel.router.dismiss(animated: false)
+                        
+                        viewModel.analytics
+                            .finishVerticalNextSectionClicked(
+                                courseId: viewModel.courseID,
+                                courseName: viewModel.courseName,
+                                blockId: viewModel.selectedLesson().blockId,
+                                blockName: viewModel.selectedLesson().displayName
+                            )
+                        
+                        guard let data = viewModel.nextData else { return }
+                        viewModel.router.replaceCourseUnit(
+                            courseName: viewModel.courseName,
+                            blockId: viewModel.lessonID,
+                            courseID: viewModel.courseID,
+                            verticalIndex: data.verticalIndex,
+                            chapters: viewModel.chapters,
+                            chapterIndex: data.chapterIndex,
+                            sequentialIndex: data.sequentialIndex,
+                            animated: true,
+                            showVideoNavigation: false,
+                            courseVideoStructure: nil
+                        )
+                    }
+                )
+                playerStateSubject.send(VideoPlayerState.pause)
+                viewModel.analytics.finishVerticalClicked(
+                    courseId: viewModel.courseID,
+                    courseName: viewModel.courseName,
+                    blockId: viewModel.selectedLesson().blockId,
+                    blockName: viewModel.selectedLesson().displayName
+                )
+            }
+        )
+    }
+}
+
+#if DEBUG
+struct CourseNavigationView_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = CourseUnitViewModel(
+            lessonID: "1",
+            courseID: "1",
+            courseName: "Name",
+            chapters: [],
+            chapterIndex: 1,
+            sequentialIndex: 1,
+            verticalIndex: 1,
+            interactor: CourseInteractor.mock,
+            config: ConfigMock(),
+            router: CourseRouterMock(),
+            analytics: CourseAnalyticsMock(),
+            connectivity: Connectivity(config: ConfigMock()),
+            storage: CourseStorageMock(),
+            manager: DownloadManagerMock()
+        )
+        
+        CourseNavigationView(
+            viewModel: viewModel,
+            playerStateSubject: CurrentValueSubject<VideoPlayerState?, Never>(nil)
+        )
+    }
+}
+#endif

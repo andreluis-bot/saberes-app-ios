@@ -1,0 +1,121 @@
+//
+//  DiscussionTopicsViewModelTests.swift
+//  DiscussionTests
+//
+//  Created by  Stepanok Ivan on 31.01.2023.
+//
+
+import XCTest
+@testable import Core
+@testable import Discussion
+import Alamofire
+import SwiftUI
+
+@MainActor
+final class DiscussionTopicsViewModelTests: XCTestCase {
+
+    let topics = Topics(coursewareTopics: [
+        CoursewareTopics(id: "1", name: "1", threadListURL: "1", children: [
+            CoursewareTopics(id: "11", name: "11", threadListURL: "11", children: [])
+        ]),
+        CoursewareTopics(id: "2", name: "2", threadListURL: "2", children: [
+            CoursewareTopics(id: "22", name: "22", threadListURL: "22", children: [])
+        ]),
+        CoursewareTopics(id: "3", name: "3", threadListURL: "3", children: [
+            CoursewareTopics(id: "33", name: "33", threadListURL: "33", children: [])
+        ])
+    ], nonCoursewareTopics: [
+        CoursewareTopics(id: "4", name: "4", threadListURL: "4", children: [
+            CoursewareTopics(id: "44", name: "44", threadListURL: "44", children: [])
+        ]),
+        CoursewareTopics(id: "5", name: "5", threadListURL: "5", children: [
+            CoursewareTopics(id: "55", name: "55", threadListURL: "55", children: [])
+        ]),
+        CoursewareTopics(id: "6", name: "6", threadListURL: "6", children: [
+            CoursewareTopics(id: "66", name: "66", threadListURL: "66", children: [])
+        ])
+    ])
+
+    let discussionInfo = DiscussionInfo(discussionID: "1", blackouts: [])
+
+    func testGetTopicsSuccess() async throws {
+        let interactor = DiscussionInteractorProtocolMock()
+        let router = DiscussionRouterMock()
+        let analytics = DiscussionAnalyticsMock()
+        let config = ConfigProtocolMock()
+
+        interactor.getTopicsHandler = { _ in self.topics }
+        interactor.getCourseDiscussionInfoHandler = { _ in self.discussionInfo }
+
+        let viewModel = DiscussionTopicsViewModel(title: "",
+                                                  interactor: interactor,
+                                                  router: router,
+                                                  analytics: analytics,
+                                                  config: config)
+
+        await viewModel.getTopics(courseID: "1")
+
+        XCTAssertEqual(interactor.getTopicsCallCount, 1)
+        XCTAssertEqual(interactor.getCourseDiscussionInfoCallCount, 1)
+
+        XCTAssertNotNil(viewModel.topics)
+        XCTAssertNotNil(viewModel.discussionTopics)
+        XCTAssertFalse(viewModel.showError)
+        XCTAssertNil(viewModel.errorMessage)
+        XCTAssertFalse(viewModel.isShowProgress)
+    }
+
+    func testGetTopicsNoInternetError() async throws {
+        let interactor = DiscussionInteractorProtocolMock()
+        let router = DiscussionRouterMock()
+        let analytics = DiscussionAnalyticsMock()
+        let config = ConfigProtocolMock()
+
+        let noInternetError = AFError.sessionInvalidated(error: URLError(.notConnectedToInternet))
+
+        interactor.getTopicsHandler = { _ in throw noInternetError }
+        interactor.getCourseDiscussionInfoHandler = { _ in self.discussionInfo }
+
+        let viewModel = DiscussionTopicsViewModel(title: "",
+                                                  interactor: interactor,
+                                                  router: router,
+                                                  analytics: analytics,
+                                                  config: config)
+
+        await viewModel.getTopics(courseID: "1")
+
+        XCTAssertEqual(interactor.getCourseDiscussionInfoCallCount, 1)
+        XCTAssertEqual(interactor.getTopicsCallCount, 1)
+
+        XCTAssertNil(viewModel.topics)
+        XCTAssertTrue(viewModel.discussionTopics.isEmpty)
+        XCTAssertFalse(viewModel.isShowProgress)
+        XCTAssertFalse(viewModel.isShowRefresh)
+    }
+
+    func testGetTopicsUnknownError() async throws {
+        let interactor = DiscussionInteractorProtocolMock()
+        let router = DiscussionRouterMock()
+        let analytics = DiscussionAnalyticsMock()
+        let config = ConfigProtocolMock()
+
+        interactor.getTopicsHandler = { _ in throw NSError(domain: "error", code: -1, userInfo: nil) }
+        interactor.getCourseDiscussionInfoHandler = { _ in self.discussionInfo }
+
+        let viewModel = DiscussionTopicsViewModel(title: "",
+                                                  interactor: interactor,
+                                                  router: router,
+                                                  analytics: analytics,
+                                                  config: config)
+
+        await viewModel.getTopics(courseID: "1")
+
+        XCTAssertEqual(interactor.getCourseDiscussionInfoCallCount, 1)
+        XCTAssertEqual(interactor.getTopicsCallCount, 1)
+
+        XCTAssertNil(viewModel.topics)
+        XCTAssertTrue(viewModel.discussionTopics.isEmpty)
+        XCTAssertFalse(viewModel.isShowProgress)
+        XCTAssertFalse(viewModel.isShowRefresh)
+    }
+}

@@ -1,0 +1,9 @@
+xcassets:
+  inputs:
+    - Theme/Assets.xcassets
+  outputs:
+    templatePath: ../Template/structured-swift6.stencil
+    params:
+        publicAccess: true
+        enumName: ThemeAssets
+    output: Theme/SwiftGen/ThemeAssets.swift

@@ -1,0 +1,27 @@
+{
+  "images" : [
+    {
+      "filename" : "icon left.svg",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "icon left-2.svg",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
+  }
+}

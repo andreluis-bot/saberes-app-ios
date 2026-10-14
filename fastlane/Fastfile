@@ -1,0 +1,46 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Do not enable update_fastlane here. In CI it self-updates fastlane at runtime,
+# so the version pinned in Gemfile.lock is not the version that actually runs,
+# and the RubyGems documentation hook it triggers pulls in rdoc, which fails to
+# load under bundler.
+
+before_all do
+  xcodes(
+    version: '26.2',
+    select_for_current_build_only: true,
+  )
+
+  ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "180"
+  ENV["FASTLANE_XCODE_LIST_TIMEOUT"] = "180"
+end
+
+lane :linting do
+  swiftlint(
+    mode: :lint,
+    executable: "Pods/SwiftLint/swiftlint",
+    # output_file: "swiftlint.result.json",
+    config_file: ".swiftlint.yml",
+    raise_if_swiftlint_error: true,
+    ignore_exit_status: false
+  )
+end
+
+lane :unit_tests do
+  run_tests(
+    workspace: "OpenEdX.xcworkspace",
+    device: "iPhone 16",
+    scheme: "OpenEdXDev",
+    xcargs: "-skipPackagePluginValidation -skipMacroValidation" # Ignore swiftLint plugin validation
+  )
+end

@@ -1,0 +1,116 @@
+//
+//  FullScreenErrorView.swift
+//  Course
+//
+//  Created by Shafqat Muneer on 5/14/24.
+//
+
+import SwiftUI
+import Theme
+
+public struct FullScreenErrorView: View {
+    
+    public enum ErrorType: Equatable {
+        case noInternet
+        case noInternetWithReload
+        case generic
+        case noContent(_ message: String, image: SwiftUI.Image, showButton: Bool = false)
+    }
+    
+    private let errorType: ErrorType
+    private var action: () -> Void = {}
+    
+    public init(
+        type: ErrorType
+    ) {
+        self.errorType = type
+    }
+    
+    public init(
+        type: ErrorType,
+        action: @escaping () -> Void
+    ) {
+        self.errorType = type
+        self.action = action
+    }
+    
+    public var body: some View {
+        VStack(spacing: 20) {
+            Spacer()
+            switch errorType {
+            case .noContent(let message, image: let image, showButton: let show):
+                image
+                    .resizable()
+                    .renderingMode(.template)
+                    .foregroundStyle(Theme.Colors.emptyStateIconColor)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 72, maxHeight: 80)
+                
+                Text(message)
+                    .font(Theme.Fonts.labelLarge)
+                    .foregroundColor(Theme.Colors.textPrimary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 50)
+            case .noInternet,
+                    .noInternetWithReload:
+                CoreAssets.noWifi.swiftUIImage
+                    .renderingMode(.template)
+                    .foregroundStyle(Theme.Colors.emptyStateIconColor)
+                    .scaledToFit()
+                
+                Text(CoreLocalization.Error.Internet.noInternetTitle)
+                    .font(Theme.Fonts.labelLarge)
+                    .foregroundColor(Theme.Colors.textPrimary)
+                
+                Text(CoreLocalization.Error.Internet.noInternetDescription)
+                    .font(Theme.Fonts.labelLarge)
+                    .foregroundColor(Theme.Colors.textPrimary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 50)
+            case .generic:
+                CoreAssets.notAvaliable.swiftUIImage
+                    .renderingMode(.template)
+                    .foregroundStyle(Theme.Colors.emptyStateIconColor)
+                    .scaledToFit()
+                
+                Text(CoreLocalization.View.Snackbar.tryAgainBtn)
+                    .font(Theme.Fonts.labelLarge)
+                    .foregroundColor(Theme.Colors.textPrimary)
+                
+                Text(CoreLocalization.Error.unknownError)
+                    .font(Theme.Fonts.labelLarge)
+                    .foregroundColor(Theme.Colors.textPrimary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 50)
+                
+            }
+            if errorType == .noInternetWithReload || errorType == .generic {
+                UnitButtonView(
+                    type: .reload,
+                    action: {
+                        self.action()
+                    }
+                )
+            } else if case .noContent(_, _, let showButton) = errorType, showButton {
+                UnitButtonView(type: .custom(CoreLocalization.back)) {
+                    self.action()
+                }
+                .padding(.horizontal, 70)
+            }
+
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Theme.Colors.background
+        )
+    }
+}
+
+#if DEBUG
+struct FullScreenErrorView_Previews: PreviewProvider {
+    static var previews: some View {
+        FullScreenErrorView(type: .noInternetWithReload)
+    }
+}
+#endif

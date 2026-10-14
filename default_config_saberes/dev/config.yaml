@@ -1,0 +1,26 @@
+# Saberes INTERSSAN — app iOS, ambiente dev
+API_HOST_URL: http://local.openedx.io
+SSO_URL: http://local.openedx.io
+SSO_FINISHED_URL: http://local.openedx.io
+ENVIRONMENT_DISPLAY_NAME: Saberes (Nitro5)
+FEEDBACK_EMAIL_ADDRESS: adm@interssan.org
+OAUTH_CLIENT_ID: saberes-app-movel
+SSO_BUTTON_TITLE:
+  ar: الدخول عبر SSO
+  en: Sign in with SSO
+APP_LEVEL_DATES_ENABLED: true
+EXPERIMENTAL_FEATURES:
+  APP_LEVEL_DOWNLOADS:
+    ENABLED: false
+UI_COMPONENTS:
+  COURSE_UNIT_PROGRESS_ENABLED: true
+  COURSE_NESTED_LIST_ENABLED: false
+  LOGIN_REGISTRATION_ENABLED: true
+  SAML_SSO_LOGIN_ENABLED: false
+  SAML_SSO_DEFAULT_LOGIN_BUTTON: false
+IS_SWITCH_INSTANCE_LOGIN_ENABLED: false
+AGREEMENT_URLS:
+  PRIVACY_POLICY_URL: http://local.openedx.io/privacy
+  COOKIE_POLICY_URL: http://local.openedx.io/privacy#cookies
+  TOS_URL: http://local.openedx.io/tos
+  SUPPORTED_LANGUAGES: []

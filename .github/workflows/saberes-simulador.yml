@@ -1,0 +1,57 @@
+# Saberes INTERSSAN — compila o app iOS (variante Prod → https://saberes.interssan.org) para o SIMULADOR, sem
+# assinatura, num Mac da nuvem do GitHub. O .app sai como artefato e é enviado ao Appetize.io (iPhone virtual no
+# navegador) a partir do Nitro5 — o token do Appetize não fica neste repositório.
+name: Saberes iOS (simulador)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  simulador:
+    runs-on: macos-26
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Xcode 26
+        run: |
+          ls -d /Applications/Xcode*.app
+          X=$(ls -d /Applications/Xcode_26.2*.app 2>/dev/null | head -1)
+          [ -n "$X" ] || X=$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)
+          sudo xcode-select -s "$X"
+          xcodebuild -version
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Tradução oficial pt_BR (openedx-translations)
+        run: |
+          python3 -m pip install --user -r i18n_scripts/requirements.txt
+          export PATH="$(python3 -m site --user-base)/bin:$PATH"
+          make pull_translations
+
+      - name: Dependências (CocoaPods)
+        run: bundle exec pod install
+
+      - name: Compilar para o simulador
+        run: |
+          set -o pipefail
+          xcodebuild -workspace OpenEdX.xcworkspace -scheme OpenEdXProd -configuration DebugProd \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO -skipPackagePluginValidation -skipMacroValidation build | tail -60
+
+      - name: Empacotar o .app
+        run: |
+          cd build/Build/Products/DebugProd-iphonesimulator
+          ls
+          ditto -c -k --sequesterRsrc --keepParent "$(ls -d *.app | head -1)" "$GITHUB_WORKSPACE/Saberes-simulador.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: saberes-ios-simulador
+          path: Saberes-simulador.zip
+          retention-days: 14

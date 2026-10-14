@@ -1,0 +1,2359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02197DC52C1AFC0600CC8FF2 /* CalendarSyncStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EBC7542C19CFCF00BE182C /* CalendarSyncStatusView.swift */; };
+		02228B2F2C221412009A5F28 /* LargestDownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02228B2E2C221412009A5F28 /* LargestDownloadsView.swift */; };
+		02280F5E294B4FDA0032823A /* CourseCoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02280F5C294B4FDA0032823A /* CourseCoreModel.xcdatamodeld */; };
+		02280F60294B50030032823A /* CoursePersistenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02280F5F294B50030032823A /* CoursePersistenceProtocol.swift */; };
+		022C64D829ACEC48000F532B /* HandoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C64D729ACEC48000F532B /* HandoutsView.swift */; };
+		022C64DA29ACEC50000F532B /* HandoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C64D929ACEC50000F532B /* HandoutsViewModel.swift */; };
+		022C64DC29ACFDEE000F532B /* Data_HandoutsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C64DB29ACFDEE000F532B /* Data_HandoutsResponse.swift */; };
+		022C64DE29AD167A000F532B /* HandoutsUpdatesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C64DD29AD1679000F532B /* HandoutsUpdatesDetailView.swift */; };
+		022C64E029ADEA9B000F532B /* Data_UpdatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C64DF29ADEA9B000F532B /* Data_UpdatesResponse.swift */; };
+		022C64E229ADEB83000F532B /* CourseUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C64E129ADEB83000F532B /* CourseUpdate.swift */; };
+		022EA8CB297AD63B0014A8F7 /* CourseContainerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022EA8CA297AD63B0014A8F7 /* CourseContainerViewModelTests.swift */; };
+		022F8E162A1DFBC6008EFAB9 /* YouTubeVideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022F8E152A1DFBC6008EFAB9 /* YouTubeVideoPlayerViewModel.swift */; };
+		022F8E182A1E2642008EFAB9 /* EncodedVideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022F8E172A1E2642008EFAB9 /* EncodedVideoPlayerViewModel.swift */; };
+		0231124D28EDA804002588FB /* CourseUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231124C28EDA804002588FB /* CourseUnitView.swift */; };
+		0231124F28EDA811002588FB /* CourseUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231124E28EDA811002588FB /* CourseUnitViewModel.swift */; };
+		023812E8297AC8EB0087098F /* Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0289F8EE28E1C3510064F8F3 /* Course.framework */; platformFilter = ios; };
+		02454CA02A2618E70043052A /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454C9F2A2618E70043052A /* YouTubeView.swift */; };
+		02454CA22A26190A0043052A /* EncodedVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454CA12A26190A0043052A /* EncodedVideoView.swift */; };
+		02454CA42A26193F0043052A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454CA32A26193F0043052A /* WebView.swift */; };
+		02454CA62A26196C0043052A /* NotAvailableOnMobileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454CA52A26196C0043052A /* NotAvailableOnMobileView.swift */; };
+		02454CA82A2619890043052A /* DiscussionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454CA72A2619890043052A /* DiscussionView.swift */; };
+		02454CAA2A2619B40043052A /* LessonProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454CA92A2619B40043052A /* LessonProgressView.swift */; };
+		0248C92729C097EB00DC8402 /* CourseVerticalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0248C92629C097EB00DC8402 /* CourseVerticalViewModel.swift */; };
+		0262148F29AE17C4008BD75A /* HandoutsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262148E29AE17C4008BD75A /* HandoutsViewModelTests.swift */; };
+		02635AC72A24F181008062F2 /* ContinueWithView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02635AC62A24F181008062F2 /* ContinueWithView.swift */; };
+		0265B4B728E2141D00E6EAFD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265B4B628E2141D00E6EAFD /* Strings.swift */; };
+		027020FC28E7362100F54332 /* Data_CourseOutlineResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027020FB28E7362100F54332 /* Data_CourseOutlineResponse.swift */; };
+		0270210328E736E700F54332 /* CourseOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270210128E736E700F54332 /* CourseOutlineView.swift */; };
+		0276D75B29DDA3890004CDF8 /* Data_ResumeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276D75A29DDA3890004CDF8 /* Data_ResumeBlock.swift */; };
+		0276D75D29DDA3F80004CDF8 /* ResumeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276D75C29DDA3F80004CDF8 /* ResumeBlock.swift */; };
+		0289F90228E1C3E10064F8F3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0289F90128E1C3E00064F8F3 /* swiftgen.yml */; };
+		0295B1D9297E6DF8003B0C65 /* CourseUnitViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295B1D8297E6DF8003B0C65 /* CourseUnitViewModelTests.swift */; };
+		0295C889299BBE8200ABE571 /* CourseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295C888299BBE8200ABE571 /* CourseNavigationView.swift */; };
+		02A8076829474831007F53AB /* CourseVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A8076729474831007F53AB /* CourseVerticalView.swift */; };
+		02B6B3B228E1C49400232911 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02B6B3B428E1C49400232911 /* Localizable.strings */; };
+		02B6B3B728E1D11E00232911 /* CourseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B6B3B628E1D11E00232911 /* CourseInteractor.swift */; };
+		02B6B3BC28E1D14F00232911 /* CourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B6B3BB28E1D14F00232911 /* CourseRepository.swift */; };
+		02B6B3BE28E1D15C00232911 /* CourseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B6B3BD28E1D15C00232911 /* CourseEndpoint.swift */; };
+		02B6B3C928E1E68100232911 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B6B3C828E1E68100232911 /* Core.framework */; };
+		02BB20182BFCE7B200364948 /* CustomDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BB20172BFCE7B200364948 /* CustomDisclosureGroup.swift */; };
+		02C355392C08DCD700501342 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 02C355372C08DCD700501342 /* Localizable.stringsdict */; };
+		02C7B1D82C271A7000D2A7BB /* OfflineContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7B1D72C271A7000D2A7BB /* OfflineContentView.swift */; };
+		02D4FC2E2BBD7C9C00C47748 /* MessageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4FC2D2BBD7C9C00C47748 /* MessageSectionView.swift */; };
+		02E3803E2BFF9F0A00815AFA /* CourseProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3803D2BFF9F0A00815AFA /* CourseProgressView.swift */; };
+		02F3BFDD29252E900051930C /* CourseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3BFDC29252E900051930C /* CourseRouter.swift */; };
+		02F78AEB29E6BCA20038DE30 /* VideoPlayerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F78AEA29E6BCA20038DE30 /* VideoPlayerViewModelTests.swift */; };
+		02F98A8128F8224200DE94C0 /* Discussion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F98A8028F8224200DE94C0 /* Discussion.framework */; };
+		02FCB2B32BBEB36600373180 /* CourseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCB2B22BBEB36600373180 /* CourseHeaderView.swift */; };
+		02FF6FA72C20BFF800E44DD8 /* OfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF6FA62C20BFF800E44DD8 /* OfflineView.swift */; };
+		02FF6FAA2C20D56A00E44DD8 /* TotalDownloadedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF6FA92C20D56A00E44DD8 /* TotalDownloadedProgressView.swift */; };
+		02FFAD0D29E4347300140E46 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFAD0C29E4347300140E46 /* VideoPlayerViewModel.swift */; };
+		060E8BCA2B5FD68C0080C952 /* UnitStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060E8BC92B5FD68C0080C952 /* UnitStack.swift */; };
+		0631FF982D2BE67F007CA011 /* CourseDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0631FF972D2BE674007CA011 /* CourseDownloadHelper.swift */; };
+		065275352BB1B39C0093BCCA /* PlayerViewControllerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065275342BB1B39C0093BCCA /* PlayerViewControllerHolder.swift */; };
+		065D575D2D4442D700350351 /* CourseDownloadHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D575C2D4442D000350351 /* CourseDownloadHelperTests.swift */; };
+		067B7B4E2BED339200D1768F /* PlayerTrackerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B7B472BED339200D1768F /* PlayerTrackerProtocol.swift */; };
+		067B7B4F2BED339200D1768F /* PlayerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B7B482BED339200D1768F /* PlayerDelegateProtocol.swift */; };
+		067B7B502BED339200D1768F /* PlayerControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B7B492BED339200D1768F /* PlayerControllerProtocol.swift */; };
+		067B7B512BED339200D1768F /* PipManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B7B4A2BED339200D1768F /* PipManagerProtocol.swift */; };
+		067B7B522BED339200D1768F /* SubtitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B7B4B2BED339200D1768F /* SubtitlesView.swift */; };
+		067B7B532BED339200D1768F /* PlayerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B7B4C2BED339200D1768F /* PlayerServiceProtocol.swift */; };
+		067B7B542BED339200D1768F /* YoutubePlayerViewControllerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B7B4D2BED339200D1768F /* YoutubePlayerViewControllerHolder.swift */; };
+		068DDA5F2B1E198700FF8CCB /* CourseUnitDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068DDA5B2B1E198700FF8CCB /* CourseUnitDropDownList.swift */; };
+		068DDA602B1E198700FF8CCB /* CourseUnitVerticalsDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068DDA5C2B1E198700FF8CCB /* CourseUnitVerticalsDropdownView.swift */; };
+		068DDA612B1E198700FF8CCB /* CourseUnitDropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068DDA5D2B1E198700FF8CCB /* CourseUnitDropDownCell.swift */; };
+		068DDA622B1E198700FF8CCB /* CourseUnitDropDownTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068DDA5E2B1E198700FF8CCB /* CourseUnitDropDownTitle.swift */; };
+		06FD7EDF2B1F29F3008D632B /* CourseVerticalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD7EDE2B1F29F3008D632B /* CourseVerticalImageView.swift */; };
+		06FD7EE32B1F3FF6008D632B /* DropdownAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD7EE22B1F3FF6008D632B /* DropdownAnimationModifier.swift */; };
+		073512E229C0E400005CFA41 /* BaseCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073512E129C0E400005CFA41 /* BaseCourseViewModel.swift */; };
+		0766DFCC299AA7A600EBEF6A /* YouTubeVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766DFCB299AA7A600EBEF6A /* YouTubeVideoPlayer.swift */; };
+		0766DFCE299AB26D00EBEF6A /* EncodedVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766DFCD299AB26D00EBEF6A /* EncodedVideoPlayer.swift */; };
+		0766DFD0299AB29000EBEF6A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766DFCF299AB29000EBEF6A /* PlayerViewController.swift */; };
+		07DE59862BECB868001CBFBC /* CourseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE59852BECB868001CBFBC /* CourseAnalytics.swift */; };
+		197FB8EA8F92F00A8F383D82 /* Pods_App_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E795BD160CDA7D9C120DE6 /* Pods_App_Course.framework */; };
+		975F475E2B6151FD00E5B031 /* CourseDatesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975F475D2B6151FD00E5B031 /* CourseDatesMock.swift */; };
+		975F47602B615DA700E5B031 /* CourseStructureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975F475F2B615DA700E5B031 /* CourseStructureMock.swift */; };
+		97C99C362B9A08FE004EEDE2 /* CalendarSyncProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C99C352B9A08FE004EEDE2 /* CalendarSyncProgressView.swift */; };
+		97CA95252B875EE200A9EDEA /* DatesSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA95242B875EE200A9EDEA /* DatesSuccessView.swift */; };
+		97E7DF0F2B7C852A00A2A09B /* DatesStatusInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E7DF0E2B7C852A00A2A09B /* DatesStatusInfoView.swift */; };
+		A52897D12E24F5C1009C7044 /* CourseCompletionCarouselSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897D02E24F5C1009C7044 /* CourseCompletionCarouselSlideView.swift */; };
+		A52897D42E24FA9F009C7044 /* CourseOutlineAndProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897D32E24FA9F009C7044 /* CourseOutlineAndProgressView.swift */; };
+		A52897D62E2500E5009C7044 /* WhatsNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52897D52E2500E5009C7044 /* WhatsNew.framework */; };
+		A52897D82E252357009C7044 /*  CourseOutlineAndProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897D72E252349009C7044 /*  CourseOutlineAndProgressViewModel.swift */; };
+		A52897DC2E276B12009C7044 /* CourseGradeCarouselSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897DB2E276B02009C7044 /* CourseGradeCarouselSlideView.swift */; };
+		A52897DE2E277A7C009C7044 /* GradeItemCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897DD2E277A7C009C7044 /* GradeItemCarouselView.swift */; };
+		A52897E02E278D7D009C7044 /* ViewAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897DF2E278D7D009C7044 /* ViewAllButton.swift */; };
+		A59016D52E69B2E900076220 /* VideoNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59016D42E69B2E900076220 /* VideoNavigationView.swift */; };
+		A5A510A22E66E8D600553607 /* CourseVideoCarouselSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A510A12E66E8D600553607 /* CourseVideoCarouselSlideView.swift */; };
+		A5A510A42E6728AD00553607 /* CourseAssignmentsCarouselSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A510A32E6728AD00553607 /* CourseAssignmentsCarouselSlideView.swift */; };
+		A5A510A62E672E4A00553607 /* AssignmentCarouselDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A510A52E672E4A00553607 /* AssignmentCarouselDetailCardView.swift */; };
+		A5B468142F29DCA3002A4ECA /* CourseMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B468122F29DCA3002A4ECA /* CourseMocks.generated.swift */; };
+		B8F50317B6B830A0E520C954 /* Pods_App_Course_CourseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E59D2B81E12610964282C5 /* Pods_App_Course_CourseTests.framework */; };
+		BA58CF5D2B3D804D005B102E /* CourseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA58CF5C2B3D804D005B102E /* CourseStorage.swift */; };
+		BA58CF612B471041005B102E /* VideoDownloadQualityBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA58CF602B471041005B102E /* VideoDownloadQualityBarView.swift */; };
+		BA58CF642B471363005B102E /* VideoDownloadQualityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA58CF632B471363005B102E /* VideoDownloadQualityContainerView.swift */; };
+		BAC0E0D82B32EF03006B68A9 /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0E0D72B32EF03006B68A9 /* DownloadsView.swift */; };
+		BAC0E0DB2B32F0AE006B68A9 /* CourseVideoDownloadBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0E0DA2B32F0AE006B68A9 /* CourseVideoDownloadBarViewModel.swift */; };
+		BAC0E0DE2B32F0F3006B68A9 /* DownloadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0E0DD2B32F0F3006B68A9 /* DownloadsViewModel.swift */; };
+		BAD9CA2D2B2736BB00DE790A /* LessonLineProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9CA2C2B2736BB00DE790A /* LessonLineProgressView.swift */; };
+		BAD9CA4A2B2C88E000DE790A /* CourseVideoDownloadBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9CA492B2C88E000DE790A /* CourseVideoDownloadBarView.swift */; };
+		CE02086C2E0EC88C005999E2 /* VideosContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02086B2E0EC88C005999E2 /* VideosContentView.swift */; };
+		CE1AC4012E055CCD00618645 /* CourseProgressScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC3FF2E055CCD00618645 /* CourseProgressScreenView.swift */; };
+		CE1AC4032E05A33D00618645 /* Data_CourseProgressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC4022E05A33D00618645 /* Data_CourseProgressResponse.swift */; };
+		CE1AC4052E05A35000618645 /* CourseProgressDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC4042E05A35000618645 /* CourseProgressDetails.swift */; };
+		CE1AC4072E05A36C00618645 /* CourseProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC4062E05A36C00618645 /* CourseProgressViewModel.swift */; };
+		CE1AC40C2E06DCC900618645 /* OverallGradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC40A2E06DCC900618645 /* OverallGradeView.swift */; };
+		CE1AC40D2E06DCC900618645 /* GradeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC4092E06DCC900618645 /* GradeItemView.swift */; };
+		CE1AC40E2E06DCC900618645 /* GradeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC4082E06DCC900618645 /* GradeDetailsView.swift */; };
+		CE1AC41BFAF7140618645 /* CourseProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC41AFAF7140618645 /* CourseProgressCircleView.swift */; };
+		CE1AC45F0EDBBF0618645 /* SegmentedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC45E0EDBBF0618645 /* SegmentedProgressView.swift */; };
+		CE4BA8832E0806380050F2C7 /* CourseProgressViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BA8822E0806380050F2C7 /* CourseProgressViewModelTests.swift */; };
+		CE4BA9162E0AC3790050F2C7 /* CourseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BA9142E0AC3790050F2C7 /* CourseContentView.swift */; };
+		CE4BA9192E0AC99A0050F2C7 /* ContentSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BA9172E0AC99A0050F2C7 /* ContentSegmentedControl.swift */; };
+		CE4BA91C2E0AE2960050F2C7 /* AllContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BA91A2E0AE2960050F2C7 /* AllContentView.swift */; };
+		CE4BA91E2E0AED930050F2C7 /* CustomProgressShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BA91D2E0AED930050F2C7 /* CustomProgressShape.swift */; };
+		CE4BA9202E0AF22A0050F2C7 /* SectionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BA91F2E0AF22A0050F2C7 /* SectionProgressView.swift */; };
+		CE5BBFEC2E22A88900D51C92 /* AssignmentDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BBFEB2E22A88900D51C92 /* AssignmentDetailCardView.swift */; };
+		CE5BBFEE2E22A8AF00D51C92 /* AssignmentCardSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BBFED2E22A8AF00D51C92 /* AssignmentCardSmallView.swift */; };
+		CE5BBFF22E22C91000D51C92 /* AssignmentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BBFF12E22C91000D51C92 /* AssignmentSection.swift */; };
+		CE6386642D07215E00C01D69 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6386632D07215E00C01D69 /* Line.swift */; };
+		CE6386662D07217300C01D69 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6386652D07217300C01D69 /* TimeLineView.swift */; };
+		CE6386682D07219B00C01D69 /* CourseDateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6386672D07219B00C01D69 /* CourseDateListView.swift */; };
+		CE63866A2D0721B600C01D69 /* CompletedBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6386692D0721B600C01D69 /* CompletedBlocks.swift */; };
+		CE63866C2D0721D600C01D69 /* BlockStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63866B2D0721D600C01D69 /* BlockStatusView.swift */; };
+		CE63866E2D07220600C01D69 /* CourseDateStyleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63866D2D07220600C01D69 /* CourseDateStyleBlock.swift */; };
+		CE7CAF412CC1563500E0AC9D /* OEXFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = CE7CAF402CC1563500E0AC9D /* OEXFoundation */; };
+		CE812FAB2E15157600EDCC63 /* VideoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE812FAA2E15157600EDCC63 /* VideoSectionView.swift */; };
+		CE812FAD2E15168C00EDCC63 /* VideoThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE812FAC2E15168C00EDCC63 /* VideoThumbnailView.swift */; };
+		CE83F79E2E5DD4AD004E0F7B /* CourseContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83F79D2E5DD4AD004E0F7B /* CourseContainerView.swift */; };
+		CE83F7A02E5DD516004E0F7B /* CourseContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83F79F2E5DD516004E0F7B /* CourseContainerViewModel.swift */; };
+		CEAB6BDC2E19695D00E8E898 /* NoContentAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB6BDB2E19695D00E8E898 /* NoContentAvailable.swift */; };
+		CEAB6C2F2E1D242100E8E898 /* CourseProgressDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB6C2E2E1D242100E8E898 /* CourseProgressDetails.swift */; };
+		CEAB6C312E1D3B2700E8E898 /* AssignmentsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB6C302E1D3B2700E8E898 /* AssignmentsContentView.swift */; };
+		CEAB6C3A2E1D3B3900E8E899 /* ProgressAssignmentTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB6C3B2E1D3B3900E8E899 /* ProgressAssignmentTypeSection.swift */; };
+		CEAB6C3C2E1D3B3900E8E800 /* AssignmentCardStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB6C3D2E1D3B3900E8E800 /* AssignmentCardStatus.swift */; };
+		CEB1E2732CC14EC400921517 /* OEXFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = CEB1E2722CC14EC400921517 /* OEXFoundation */; };
+		CEBCA4342CC13CDE00076589 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCA4332CC13CDE00076589 /* YouTubePlayerKit */; };
+		CECF38342E3A4BB100184EC4 /* VideoContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF38322E3A4BB100184EC4 /* VideoContentData.swift */; };
+		CECF38362E3A545B00184EC4 /* AssignmentContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF38352E3A545B00184EC4 /* AssignmentContentData.swift */; };
+		CECF38382E3A73C200184EC4 /* VideoThumbnailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF38372E3A73C200184EC4 /* VideoThumbnailService.swift */; };
+		DB205BFB2AE81B1200136EC2 /* CourseDateViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB205BFA2AE81B1200136EC2 /* CourseDateViewModelTests.swift */; };
+		DB7D6EAC2ADFCAC50036BB13 /* CourseDatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D6EAB2ADFCAC40036BB13 /* CourseDatesView.swift */; };
+		DB7D6EAE2ADFCB4A0036BB13 /* CourseDatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D6EAD2ADFCB4A0036BB13 /* CourseDatesViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		023812E9297AC8EB0087098F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0289F8E528E1C3510064F8F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0289F8ED28E1C3510064F8F3;
+			remoteInfo = Course;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE7CAF432CC1563500E0AC9D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02228B2E2C221412009A5F28 /* LargestDownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargestDownloadsView.swift; sourceTree = "<group>"; };
+		02280F5D294B4FDA0032823A /* CourseCoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CourseCoreModel.xcdatamodel; sourceTree = "<group>"; };
+		02280F5F294B50030032823A /* CoursePersistenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePersistenceProtocol.swift; sourceTree = "<group>"; };
+		022C64D729ACEC48000F532B /* HandoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandoutsView.swift; sourceTree = "<group>"; };
+		022C64D929ACEC50000F532B /* HandoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandoutsViewModel.swift; sourceTree = "<group>"; };
+		022C64DB29ACFDEE000F532B /* Data_HandoutsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_HandoutsResponse.swift; sourceTree = "<group>"; };
+		022C64DD29AD1679000F532B /* HandoutsUpdatesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandoutsUpdatesDetailView.swift; sourceTree = "<group>"; };
+		022C64DF29ADEA9B000F532B /* Data_UpdatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_UpdatesResponse.swift; sourceTree = "<group>"; };
+		022C64E129ADEB83000F532B /* CourseUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseUpdate.swift; sourceTree = "<group>"; };
+		022EA8CA297AD63B0014A8F7 /* CourseContainerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContainerViewModelTests.swift; sourceTree = "<group>"; };
+		022F8E152A1DFBC6008EFAB9 /* YouTubeVideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeVideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		022F8E172A1E2642008EFAB9 /* EncodedVideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedVideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		0231124C28EDA804002588FB /* CourseUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseUnitView.swift; sourceTree = "<group>"; };
+		0231124E28EDA811002588FB /* CourseUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseUnitViewModel.swift; sourceTree = "<group>"; };
+		023812E4297AC8EA0087098F /* CourseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02454C9F2A2618E70043052A /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
+		02454CA12A26190A0043052A /* EncodedVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedVideoView.swift; sourceTree = "<group>"; };
+		02454CA32A26193F0043052A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		02454CA52A26196C0043052A /* NotAvailableOnMobileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAvailableOnMobileView.swift; sourceTree = "<group>"; };
+		02454CA72A2619890043052A /* DiscussionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionView.swift; sourceTree = "<group>"; };
+		02454CA92A2619B40043052A /* LessonProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonProgressView.swift; sourceTree = "<group>"; };
+		0248C92629C097EB00DC8402 /* CourseVerticalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVerticalViewModel.swift; sourceTree = "<group>"; };
+		0262148E29AE17C4008BD75A /* HandoutsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandoutsViewModelTests.swift; sourceTree = "<group>"; };
+		02635AC62A24F181008062F2 /* ContinueWithView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithView.swift; sourceTree = "<group>"; };
+		0265B4B628E2141D00E6EAFD /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		027020FB28E7362100F54332 /* Data_CourseOutlineResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_CourseOutlineResponse.swift; sourceTree = "<group>"; };
+		0270210128E736E700F54332 /* CourseOutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseOutlineView.swift; sourceTree = "<group>"; };
+		0276D75A29DDA3890004CDF8 /* Data_ResumeBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_ResumeBlock.swift; sourceTree = "<group>"; };
+		0276D75C29DDA3F80004CDF8 /* ResumeBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeBlock.swift; sourceTree = "<group>"; };
+		0289F8EE28E1C3510064F8F3 /* Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0289F90128E1C3E00064F8F3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		0295B1D8297E6DF8003B0C65 /* CourseUnitViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseUnitViewModelTests.swift; sourceTree = "<group>"; };
+		0295C888299BBE8200ABE571 /* CourseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseNavigationView.swift; sourceTree = "<group>"; };
+		02A8076729474831007F53AB /* CourseVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVerticalView.swift; sourceTree = "<group>"; };
+		02B6B3B328E1C49400232911 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		02B6B3B628E1D11E00232911 /* CourseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseInteractor.swift; sourceTree = "<group>"; };
+		02B6B3BB28E1D14F00232911 /* CourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRepository.swift; sourceTree = "<group>"; };
+		02B6B3BD28E1D15C00232911 /* CourseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEndpoint.swift; sourceTree = "<group>"; };
+		02B6B3C228E1DCD100232911 /* CourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetails.swift; sourceTree = "<group>"; };
+		02B6B3C828E1E68100232911 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BB20172BFCE7B200364948 /* CustomDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDisclosureGroup.swift; sourceTree = "<group>"; };
+		02C355382C08DCD700501342 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		02C3553A2C08DCE000501342 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = uk; path = uk.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		02C7B1D72C271A7000D2A7BB /* OfflineContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineContentView.swift; sourceTree = "<group>"; };
+		02D4FC2D2BBD7C9C00C47748 /* MessageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSectionView.swift; sourceTree = "<group>"; };
+		02E3803D2BFF9F0A00815AFA /* CourseProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressView.swift; sourceTree = "<group>"; };
+		02EBC7542C19CFCF00BE182C /* CalendarSyncStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSyncStatusView.swift; sourceTree = "<group>"; };
+		02F3BFDC29252E900051930C /* CourseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRouter.swift; sourceTree = "<group>"; };
+		02F78AEA29E6BCA20038DE30 /* VideoPlayerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoPlayerViewModelTests.swift; path = CourseTests/Presentation/Unit/VideoPlayerViewModelTests.swift; sourceTree = SOURCE_ROOT; };
+		02F98A8028F8224200DE94C0 /* Discussion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Discussion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FCB2B22BBEB36600373180 /* CourseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseHeaderView.swift; sourceTree = "<group>"; };
+		02FF6FA62C20BFF800E44DD8 /* OfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineView.swift; sourceTree = "<group>"; };
+		02FF6FA92C20D56A00E44DD8 /* TotalDownloadedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDownloadedProgressView.swift; sourceTree = "<group>"; };
+		02FFAD0C29E4347300140E46 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		060E8BC92B5FD68C0080C952 /* UnitStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitStack.swift; sourceTree = "<group>"; };
+		0631FF972D2BE674007CA011 /* CourseDownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDownloadHelper.swift; sourceTree = "<group>"; };
+		065275342BB1B39C0093BCCA /* PlayerViewControllerHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerHolder.swift; sourceTree = "<group>"; };
+		065D575C2D4442D000350351 /* CourseDownloadHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDownloadHelperTests.swift; sourceTree = "<group>"; };
+		067B7B472BED339200D1768F /* PlayerTrackerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTrackerProtocol.swift; sourceTree = "<group>"; };
+		067B7B482BED339200D1768F /* PlayerDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDelegateProtocol.swift; sourceTree = "<group>"; };
+		067B7B492BED339200D1768F /* PlayerControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerControllerProtocol.swift; sourceTree = "<group>"; };
+		067B7B4A2BED339200D1768F /* PipManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipManagerProtocol.swift; sourceTree = "<group>"; };
+		067B7B4B2BED339200D1768F /* SubtitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitlesView.swift; sourceTree = "<group>"; };
+		067B7B4C2BED339200D1768F /* PlayerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerServiceProtocol.swift; sourceTree = "<group>"; };
+		067B7B4D2BED339200D1768F /* YoutubePlayerViewControllerHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewControllerHolder.swift; sourceTree = "<group>"; };
+		068DDA5B2B1E198700FF8CCB /* CourseUnitDropDownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseUnitDropDownList.swift; sourceTree = "<group>"; };
+		068DDA5C2B1E198700FF8CCB /* CourseUnitVerticalsDropdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseUnitVerticalsDropdownView.swift; sourceTree = "<group>"; };
+		068DDA5D2B1E198700FF8CCB /* CourseUnitDropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseUnitDropDownCell.swift; sourceTree = "<group>"; };
+		068DDA5E2B1E198700FF8CCB /* CourseUnitDropDownTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseUnitDropDownTitle.swift; sourceTree = "<group>"; };
+		06FD7EDE2B1F29F3008D632B /* CourseVerticalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVerticalImageView.swift; sourceTree = "<group>"; };
+		06FD7EE22B1F3FF6008D632B /* DropdownAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownAnimationModifier.swift; sourceTree = "<group>"; };
+		073512E129C0E400005CFA41 /* BaseCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCourseViewModel.swift; sourceTree = "<group>"; };
+		0766DFCB299AA7A600EBEF6A /* YouTubeVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeVideoPlayer.swift; sourceTree = "<group>"; };
+		0766DFCD299AB26D00EBEF6A /* EncodedVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedVideoPlayer.swift; sourceTree = "<group>"; };
+		0766DFCF299AB29000EBEF6A /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		07DE59852BECB868001CBFBC /* CourseAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseAnalytics.swift; sourceTree = "<group>"; };
+		2A444220A08C5035164B071F /* Pods-App-Course-CourseTests.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.releasedev.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.releasedev.xcconfig"; sourceTree = "<group>"; };
+		3A55620C6018088BFF77F9AE /* Pods-App-CourseDetails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CourseDetails.debug.xcconfig"; path = "Target Support Files/Pods-App-CourseDetails/Pods-App-CourseDetails.debug.xcconfig"; sourceTree = "<group>"; };
+		3D506212980347A9D5A70E20 /* Pods-App-Course.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.debugstage.xcconfig"; sourceTree = "<group>"; };
+		418D00932369361311AEEBD3 /* Pods-App-Course-CourseTests.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.debugprod.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.debugprod.xcconfig"; sourceTree = "<group>"; };
+		4D2F08669DD2579EAAE02E2F /* Pods-App-Course.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.releasedev.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.releasedev.xcconfig"; sourceTree = "<group>"; };
+		4DD47D29A4059C1222E8B7D2 /* Pods-App-Course-CourseTests.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.releaseprod.xcconfig"; sourceTree = "<group>"; };
+		50E59D2B81E12610964282C5 /* Pods_App_Course_CourseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Course_CourseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A3A7BA0FC6386531BE678A /* Pods-App-CourseDetails.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CourseDetails.debugdev.xcconfig"; path = "Target Support Files/Pods-App-CourseDetails/Pods-App-CourseDetails.debugdev.xcconfig"; sourceTree = "<group>"; };
+		600A464AEDA7BEFEC1A7FE99 /* Pods-App-Course-CourseTests.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.debugdev.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.debugdev.xcconfig"; sourceTree = "<group>"; };
+		69A261790A0B4C724CCFA4F2 /* Pods-App-CourseDetails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CourseDetails.release.xcconfig"; path = "Target Support Files/Pods-App-CourseDetails/Pods-App-CourseDetails.release.xcconfig"; sourceTree = "<group>"; };
+		831B08139890634968EDD44D /* Pods-App-Course-CourseTests.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.debugstage.xcconfig"; sourceTree = "<group>"; };
+		975F475D2B6151FD00E5B031 /* CourseDatesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDatesMock.swift; sourceTree = "<group>"; };
+		975F475F2B615DA700E5B031 /* CourseStructureMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStructureMock.swift; sourceTree = "<group>"; };
+		97C99C352B9A08FE004EEDE2 /* CalendarSyncProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSyncProgressView.swift; sourceTree = "<group>"; };
+		97CA95242B875EE200A9EDEA /* DatesSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesSuccessView.swift; sourceTree = "<group>"; };
+		97E7DF0E2B7C852A00A2A09B /* DatesStatusInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesStatusInfoView.swift; sourceTree = "<group>"; };
+		99AEF08FD75F1509863D3302 /* Pods-App-CourseDetails.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CourseDetails.debugprod.xcconfig"; path = "Target Support Files/Pods-App-CourseDetails/Pods-App-CourseDetails.debugprod.xcconfig"; sourceTree = "<group>"; };
+		9B5D3D31A9CFA08B6C4347BD /* Pods-App-CourseDetails.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CourseDetails.releasedev.xcconfig"; path = "Target Support Files/Pods-App-CourseDetails/Pods-App-CourseDetails.releasedev.xcconfig"; sourceTree = "<group>"; };
+		A47C63D9EB0D866F303D4588 /* Pods-App-Course.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.releasestage.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.releasestage.xcconfig"; sourceTree = "<group>"; };
+		A52897D02E24F5C1009C7044 /* CourseCompletionCarouselSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCompletionCarouselSlideView.swift; sourceTree = "<group>"; };
+		A52897D32E24FA9F009C7044 /* CourseOutlineAndProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseOutlineAndProgressView.swift; sourceTree = "<group>"; };
+		A52897D52E2500E5009C7044 /* WhatsNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WhatsNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52897D72E252349009C7044 /*  CourseOutlineAndProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CourseOutlineAndProgressViewModel.swift"; sourceTree = "<group>"; };
+		A52897DB2E276B02009C7044 /* CourseGradeCarouselSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseGradeCarouselSlideView.swift; sourceTree = "<group>"; };
+		A52897DD2E277A7C009C7044 /* GradeItemCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeItemCarouselView.swift; sourceTree = "<group>"; };
+		A52897DF2E278D7D009C7044 /* ViewAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllButton.swift; sourceTree = "<group>"; };
+		A59016D42E69B2E900076220 /* VideoNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNavigationView.swift; sourceTree = "<group>"; };
+		A5A510A12E66E8D600553607 /* CourseVideoCarouselSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoCarouselSlideView.swift; sourceTree = "<group>"; };
+		A5A510A32E6728AD00553607 /* CourseAssignmentsCarouselSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAssignmentsCarouselSlideView.swift; sourceTree = "<group>"; };
+		A5A510A52E672E4A00553607 /* AssignmentCarouselDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCarouselDetailCardView.swift; sourceTree = "<group>"; };
+		A5B468122F29DCA3002A4ECA /* CourseMocks.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMocks.generated.swift; sourceTree = "<group>"; };
+		ADC2A1B8183A674705F5F7E2 /* Pods-App-Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.debug.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.debug.xcconfig"; sourceTree = "<group>"; };
+		B196A14555D0E006995A5683 /* Pods-App-CourseDetails.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CourseDetails.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-CourseDetails/Pods-App-CourseDetails.releaseprod.xcconfig"; sourceTree = "<group>"; };
+		BA58CF5C2B3D804D005B102E /* CourseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStorage.swift; sourceTree = "<group>"; };
+		BA58CF602B471041005B102E /* VideoDownloadQualityBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDownloadQualityBarView.swift; sourceTree = "<group>"; };
+		BA58CF632B471363005B102E /* VideoDownloadQualityContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDownloadQualityContainerView.swift; sourceTree = "<group>"; };
+		BAC0E0D72B32EF03006B68A9 /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
+		BAC0E0DA2B32F0AE006B68A9 /* CourseVideoDownloadBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoDownloadBarViewModel.swift; sourceTree = "<group>"; };
+		BAC0E0DD2B32F0F3006B68A9 /* DownloadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewModel.swift; sourceTree = "<group>"; };
+		BAD9CA2C2B2736BB00DE790A /* LessonLineProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLineProgressView.swift; sourceTree = "<group>"; };
+		BAD9CA492B2C88E000DE790A /* CourseVideoDownloadBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoDownloadBarView.swift; sourceTree = "<group>"; };
+		CE02086B2E0EC88C005999E2 /* VideosContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosContentView.swift; sourceTree = "<group>"; };
+		CE1AC3FF2E055CCD00618645 /* CourseProgressScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressScreenView.swift; sourceTree = "<group>"; };
+		CE1AC4022E05A33D00618645 /* Data_CourseProgressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_CourseProgressResponse.swift; sourceTree = "<group>"; };
+		CE1AC4042E05A35000618645 /* CourseProgressDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressDetails.swift; sourceTree = "<group>"; };
+		CE1AC4062E05A36C00618645 /* CourseProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressViewModel.swift; sourceTree = "<group>"; };
+		CE1AC4082E06DCC900618645 /* GradeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailsView.swift; sourceTree = "<group>"; };
+		CE1AC4092E06DCC900618645 /* GradeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeItemView.swift; sourceTree = "<group>"; };
+		CE1AC40A2E06DCC900618645 /* OverallGradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallGradeView.swift; sourceTree = "<group>"; };
+		CE1AC41AFAF7140618645 /* CourseProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressCircleView.swift; sourceTree = "<group>"; };
+		CE1AC45E0EDBBF0618645 /* SegmentedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressView.swift; sourceTree = "<group>"; };
+		CE4BA8822E0806380050F2C7 /* CourseProgressViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressViewModelTests.swift; sourceTree = "<group>"; };
+		CE4BA9142E0AC3790050F2C7 /* CourseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentView.swift; sourceTree = "<group>"; };
+		CE4BA9172E0AC99A0050F2C7 /* ContentSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSegmentedControl.swift; sourceTree = "<group>"; };
+		CE4BA91A2E0AE2960050F2C7 /* AllContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllContentView.swift; sourceTree = "<group>"; };
+		CE4BA91D2E0AED930050F2C7 /* CustomProgressShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressShape.swift; sourceTree = "<group>"; };
+		CE4BA91F2E0AF22A0050F2C7 /* SectionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionProgressView.swift; sourceTree = "<group>"; };
+		CE5BBFEB2E22A88900D51C92 /* AssignmentDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentDetailCardView.swift; sourceTree = "<group>"; };
+		CE5BBFED2E22A8AF00D51C92 /* AssignmentCardSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCardSmallView.swift; sourceTree = "<group>"; };
+		CE5BBFF12E22C91000D51C92 /* AssignmentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentSection.swift; sourceTree = "<group>"; };
+		CE6386632D07215E00C01D69 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		CE6386652D07217300C01D69 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
+		CE6386672D07219B00C01D69 /* CourseDateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDateListView.swift; sourceTree = "<group>"; };
+		CE6386692D0721B600C01D69 /* CompletedBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedBlocks.swift; sourceTree = "<group>"; };
+		CE63866B2D0721D600C01D69 /* BlockStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockStatusView.swift; sourceTree = "<group>"; };
+		CE63866D2D07220600C01D69 /* CourseDateStyleBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDateStyleBlock.swift; sourceTree = "<group>"; };
+		CE812FAA2E15157600EDCC63 /* VideoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSectionView.swift; sourceTree = "<group>"; };
+		CE812FAC2E15168C00EDCC63 /* VideoThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbnailView.swift; sourceTree = "<group>"; };
+		CE83F79D2E5DD4AD004E0F7B /* CourseContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContainerView.swift; sourceTree = "<group>"; };
+		CE83F79F2E5DD516004E0F7B /* CourseContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContainerViewModel.swift; sourceTree = "<group>"; };
+		CEAB6BDB2E19695D00E8E898 /* NoContentAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContentAvailable.swift; sourceTree = "<group>"; };
+		CEAB6C2C2E1D240300E8E898 /* Data_CourseProgressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_CourseProgressResponse.swift; sourceTree = "<group>"; };
+		CEAB6C2E2E1D242100E8E898 /* CourseProgressDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressDetails.swift; sourceTree = "<group>"; };
+		CEAB6C302E1D3B2700E8E898 /* AssignmentsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsContentView.swift; sourceTree = "<group>"; };
+		CEAB6C3B2E1D3B3900E8E899 /* ProgressAssignmentTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressAssignmentTypeSection.swift; sourceTree = "<group>"; };
+		CEAB6C3D2E1D3B3900E8E800 /* AssignmentCardStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCardStatus.swift; sourceTree = "<group>"; };
+		CECF38322E3A4BB100184EC4 /* VideoContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentData.swift; sourceTree = "<group>"; };
+		CECF38352E3A545B00184EC4 /* AssignmentContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentContentData.swift; sourceTree = "<group>"; };
+		CECF38372E3A73C200184EC4 /* VideoThumbnailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbnailService.swift; sourceTree = "<group>"; };
+		DB205BFA2AE81B1200136EC2 /* CourseDateViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDateViewModelTests.swift; sourceTree = "<group>"; };
+		DB7D6EAB2ADFCAC40036BB13 /* CourseDatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDatesView.swift; sourceTree = "<group>"; };
+		DB7D6EAD2ADFCB4A0036BB13 /* CourseDatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDatesViewModel.swift; sourceTree = "<group>"; };
+		DBE05972CB5115D4535C6B8A /* Pods-App-Course-CourseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.debug.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5E795BD160CDA7D9C120DE6 /* Pods_App_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6BDAE887ED8A46860B3F6D3 /* Pods-App-Course-CourseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.release.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.release.xcconfig"; sourceTree = "<group>"; };
+		E954A304FDC0409BEC34C125 /* Pods-App-Course.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.debugprod.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.debugprod.xcconfig"; sourceTree = "<group>"; };
+		EBB67646EDD08315BA7B3DC5 /* Pods-App-Course-CourseTests.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.releasestage.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.releasestage.xcconfig"; sourceTree = "<group>"; };
+		EDCFD7A1BFD2200B14F10F71 /* Pods-App-Course.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.debugdev.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.debugdev.xcconfig"; sourceTree = "<group>"; };
+		F4640D6B8065C404E0BC30D5 /* Pods-App-Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.release.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.release.xcconfig"; sourceTree = "<group>"; };
+		F496B47B12CFD866EA6845CC /* Pods-App-Course.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.releaseprod.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		023812E1297AC8EA0087098F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023812E8297AC8EB0087098F /* Course.framework in Frameworks */,
+				CE7CAF412CC1563500E0AC9D /* OEXFoundation in Frameworks */,
+				B8F50317B6B830A0E520C954 /* Pods_App_Course_CourseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0289F8EB28E1C3510064F8F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A52897D62E2500E5009C7044 /* WhatsNew.framework in Frameworks */,
+				02B6B3C928E1E68100232911 /* Core.framework in Frameworks */,
+				197FB8EA8F92F00A8F383D82 /* Pods_App_Course.framework in Frameworks */,
+				CEBCA4342CC13CDE00076589 /* YouTubePlayerKit in Frameworks */,
+				02F98A8128F8224200DE94C0 /* Discussion.framework in Frameworks */,
+				CEB1E2732CC14EC400921517 /* OEXFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0208666A29CC6D8000BC05B2 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				02280F5F294B50030032823A /* CoursePersistenceProtocol.swift */,
+				02280F5C294B4FDA0032823A /* CourseCoreModel.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		023812E5297AC8EB0087098F /* CourseTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5B468132F29DCA3002A4ECA /* Generated */,
+				0766DFD4299ADA3F00EBEF6A /* Presentation */,
+			);
+			path = CourseTests;
+			sourceTree = "<group>";
+		};
+		02454C9E2A2618D40043052A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A59016D42E69B2E900076220 /* VideoNavigationView.swift */,
+				068DDA5A2B1E198700FF8CCB /* DropdownList */,
+				02454C9F2A2618E70043052A /* YouTubeView.swift */,
+				02454CA12A26190A0043052A /* EncodedVideoView.swift */,
+				02454CA32A26193F0043052A /* WebView.swift */,
+				02454CA52A26196C0043052A /* NotAvailableOnMobileView.swift */,
+				02454CA72A2619890043052A /* DiscussionView.swift */,
+				02454CA92A2619B40043052A /* LessonProgressView.swift */,
+				BAD9CA2C2B2736BB00DE790A /* LessonLineProgressView.swift */,
+				060E8BC92B5FD68C0080C952 /* UnitStack.swift */,
+				02C7B1D72C271A7000D2A7BB /* OfflineContentView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		0289F8E428E1C3510064F8F3 = {
+			isa = PBXGroup;
+			children = (
+				0289F90128E1C3E00064F8F3 /* swiftgen.yml */,
+				0289F8F028E1C3510064F8F3 /* Course */,
+				023812E5297AC8EB0087098F /* CourseTests */,
+				0289F8EF28E1C3510064F8F3 /* Products */,
+				02B6B3C728E1E68100232911 /* Frameworks */,
+				D52670044E8768425E23C627 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		0289F8EF28E1C3510064F8F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0289F8EE28E1C3510064F8F3 /* Course.framework */,
+				023812E4297AC8EA0087098F /* CourseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0289F8F028E1C3510064F8F3 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				02B6B3AD28E1C47100232911 /* SwiftGen */,
+				02B6B3B828E1D12900232911 /* Data */,
+				02B6B3B528E1D10700232911 /* Domain */,
+				02EAE2CA28E1F0A700529644 /* Presentation */,
+				02B6B3B428E1C49400232911 /* Localizable.strings */,
+				02C355372C08DCD700501342 /* Localizable.stringsdict */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		02B6B3AD28E1C47100232911 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				0265B4B628E2141D00E6EAFD /* Strings.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		02B6B3B528E1D10700232911 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				070019A328F6EFC100D5FC78 /* Model */,
+				02B6B3B628E1D11E00232911 /* CourseInteractor.swift */,
+				CECF38372E3A73C200184EC4 /* VideoThumbnailService.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		02B6B3B828E1D12900232911 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0208666A29CC6D8000BC05B2 /* Persistence */,
+				02B6B3BF28E1DB8800232911 /* Model */,
+				02B6B3B928E1D13500232911 /* Network */,
+				975F475C2B61517A00E5B031 /* Mock */,
+				02B6B3BB28E1D14F00232911 /* CourseRepository.swift */,
+				BA58CF5C2B3D804D005B102E /* CourseStorage.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		02B6B3B928E1D13500232911 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				02B6B3BD28E1D15C00232911 /* CourseEndpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		02B6B3BF28E1DB8800232911 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB6C2C2E1D240300E8E898 /* Data_CourseProgressResponse.swift */,
+				0276D75A29DDA3890004CDF8 /* Data_ResumeBlock.swift */,
+				027020FB28E7362100F54332 /* Data_CourseOutlineResponse.swift */,
+				022C64DB29ACFDEE000F532B /* Data_HandoutsResponse.swift */,
+				022C64DF29ADEA9B000F532B /* Data_UpdatesResponse.swift */,
+				CE1AC4022E05A33D00618645 /* Data_CourseProgressResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02B6B3C728E1E68100232911 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A52897D52E2500E5009C7044 /* WhatsNew.framework */,
+				02F98A8028F8224200DE94C0 /* Discussion.framework */,
+				02B6B3C828E1E68100232911 /* Core.framework */,
+				E5E795BD160CDA7D9C120DE6 /* Pods_App_Course.framework */,
+				50E59D2B81E12610964282C5 /* Pods_App_Course_CourseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02D4FC2C2BBD7C7500C47748 /* MessageSectionView */ = {
+			isa = PBXGroup;
+			children = (
+				02D4FC2D2BBD7C9C00C47748 /* MessageSectionView.swift */,
+			);
+			path = MessageSectionView;
+			sourceTree = "<group>";
+		};
+		02DFC65029ACC20A00EA4BB9 /* Handouts */ = {
+			isa = PBXGroup;
+			children = (
+				022C64D729ACEC48000F532B /* HandoutsView.swift */,
+				022C64D929ACEC50000F532B /* HandoutsViewModel.swift */,
+				022C64DD29AD1679000F532B /* HandoutsUpdatesDetailView.swift */,
+			);
+			path = Handouts;
+			sourceTree = "<group>";
+		};
+		02EAE2CA28E1F0A700529644 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A52897D22E24FA8C009C7044 /* NewOutlIineAndProgress */,
+				02FF6FA52C20BFE100E44DD8 /* Offline */,
+				DB7D6EAA2ADFCAA00036BB13 /* Dates */,
+				070019A828F6F33600D5FC78 /* Container */,
+				070019A728F6F2D600D5FC78 /* Outline */,
+				02DFC65029ACC20A00EA4BB9 /* Handouts */,
+				070019A928F6F59D00D5FC78 /* Unit */,
+				070019AA28F6F79E00D5FC78 /* Video */,
+				BAC0E0DC2B32F0EA006B68A9 /* Downloads */,
+				BAD9CA482B2C88D500DE790A /* Subviews */,
+				02F3BFDC29252E900051930C /* CourseRouter.swift */,
+				07DE59852BECB868001CBFBC /* CourseAnalytics.swift */,
+				CE4BA9152E0AC3790050F2C7 /* Content */,
+				CE1AC4002E055CCD00618645 /* Progress */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		02FF6FA52C20BFE100E44DD8 /* Offline */ = {
+			isa = PBXGroup;
+			children = (
+				02FF6FA62C20BFF800E44DD8 /* OfflineView.swift */,
+				02FF6FA82C20D53C00E44DD8 /* Subviews */,
+			);
+			path = Offline;
+			sourceTree = "<group>";
+		};
+		02FF6FA82C20D53C00E44DD8 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				02FF6FA92C20D56A00E44DD8 /* TotalDownloadedProgressView.swift */,
+				02228B2E2C221412009A5F28 /* LargestDownloadsView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		068DDA5A2B1E198700FF8CCB /* DropdownList */ = {
+			isa = PBXGroup;
+			children = (
+				068DDA5B2B1E198700FF8CCB /* CourseUnitDropDownList.swift */,
+				068DDA5C2B1E198700FF8CCB /* CourseUnitVerticalsDropdownView.swift */,
+				068DDA5D2B1E198700FF8CCB /* CourseUnitDropDownCell.swift */,
+				068DDA5E2B1E198700FF8CCB /* CourseUnitDropDownTitle.swift */,
+				06FD7EE22B1F3FF6008D632B /* DropdownAnimationModifier.swift */,
+			);
+			path = DropdownList;
+			sourceTree = "<group>";
+		};
+		070019A328F6EFC100D5FC78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB6C3D2E1D3B3900E8E800 /* AssignmentCardStatus.swift */,
+				CEAB6C2E2E1D242100E8E898 /* CourseProgressDetails.swift */,
+				02B6B3C228E1DCD100232911 /* CourseDetails.swift */,
+				0276D75C29DDA3F80004CDF8 /* ResumeBlock.swift */,
+				022C64E129ADEB83000F532B /* CourseUpdate.swift */,
+				CE1AC4042E05A35000618645 /* CourseProgressDetails.swift */,
+				CE5BBFF12E22C91000D51C92 /* AssignmentSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		070019A728F6F2D600D5FC78 /* Outline */ = {
+			isa = PBXGroup;
+			children = (
+				BAD9CA462B2C888600DE790A /* CourseVertical */,
+				02635AC62A24F181008062F2 /* ContinueWithView.swift */,
+				0270210128E736E700F54332 /* CourseOutlineView.swift */,
+			);
+			path = Outline;
+			sourceTree = "<group>";
+		};
+		070019A828F6F33600D5FC78 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				CE83F79F2E5DD516004E0F7B /* CourseContainerViewModel.swift */,
+				CE83F79D2E5DD4AD004E0F7B /* CourseContainerView.swift */,
+				0631FF972D2BE674007CA011 /* CourseDownloadHelper.swift */,
+				073512E129C0E400005CFA41 /* BaseCourseViewModel.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		070019A928F6F59D00D5FC78 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				02454C9E2A2618D40043052A /* Subviews */,
+				0231124C28EDA804002588FB /* CourseUnitView.swift */,
+				0231124E28EDA811002588FB /* CourseUnitViewModel.swift */,
+				0295C888299BBE8200ABE571 /* CourseNavigationView.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		070019AA28F6F79E00D5FC78 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				067B7B4A2BED339200D1768F /* PipManagerProtocol.swift */,
+				067B7B492BED339200D1768F /* PlayerControllerProtocol.swift */,
+				067B7B482BED339200D1768F /* PlayerDelegateProtocol.swift */,
+				067B7B4C2BED339200D1768F /* PlayerServiceProtocol.swift */,
+				067B7B472BED339200D1768F /* PlayerTrackerProtocol.swift */,
+				067B7B4B2BED339200D1768F /* SubtitlesView.swift */,
+				067B7B4D2BED339200D1768F /* YoutubePlayerViewControllerHolder.swift */,
+				065275342BB1B39C0093BCCA /* PlayerViewControllerHolder.swift */,
+				0766DFCB299AA7A600EBEF6A /* YouTubeVideoPlayer.swift */,
+				022F8E152A1DFBC6008EFAB9 /* YouTubeVideoPlayerViewModel.swift */,
+				0766DFCD299AB26D00EBEF6A /* EncodedVideoPlayer.swift */,
+				022F8E172A1E2642008EFAB9 /* EncodedVideoPlayerViewModel.swift */,
+				0766DFCF299AB29000EBEF6A /* PlayerViewController.swift */,
+				02FFAD0C29E4347300140E46 /* VideoPlayerViewModel.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		0766DFD4299ADA3F00EBEF6A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0766DFD5299ADA4700EBEF6A /* Container */,
+				0766DFD7299ADA6C00EBEF6A /* Unit */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0766DFD5299ADA4700EBEF6A /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				065D575C2D4442D000350351 /* CourseDownloadHelperTests.swift */,
+				02F78AEA29E6BCA20038DE30 /* VideoPlayerViewModelTests.swift */,
+				022EA8CA297AD63B0014A8F7 /* CourseContainerViewModelTests.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		0766DFD7299ADA6C00EBEF6A /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				0262148E29AE17C4008BD75A /* HandoutsViewModelTests.swift */,
+				0295B1D8297E6DF8003B0C65 /* CourseUnitViewModelTests.swift */,
+				DB205BFA2AE81B1200136EC2 /* CourseDateViewModelTests.swift */,
+				CE4BA8822E0806380050F2C7 /* CourseProgressViewModelTests.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		975F475C2B61517A00E5B031 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				975F475D2B6151FD00E5B031 /* CourseDatesMock.swift */,
+				975F475F2B615DA700E5B031 /* CourseStructureMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		9784D4752BF39EEF00AFEFFF /* CalendarSyncProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				97C99C352B9A08FE004EEDE2 /* CalendarSyncProgressView.swift */,
+			);
+			path = CalendarSyncProgressView;
+			sourceTree = "<group>";
+		};
+		9784D4762BF39EFD00AFEFFF /* DatesSuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				97CA95242B875EE200A9EDEA /* DatesSuccessView.swift */,
+			);
+			path = DatesSuccessView;
+			sourceTree = "<group>";
+		};
+		A52897CF2E24F571009C7044 /* CourseCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A5A510A52E672E4A00553607 /* AssignmentCarouselDetailCardView.swift */,
+				A52897D02E24F5C1009C7044 /* CourseCompletionCarouselSlideView.swift */,
+				A52897DB2E276B02009C7044 /* CourseGradeCarouselSlideView.swift */,
+				A5A510A12E66E8D600553607 /* CourseVideoCarouselSlideView.swift */,
+				A5A510A32E6728AD00553607 /* CourseAssignmentsCarouselSlideView.swift */,
+			);
+			path = CourseCarouselView;
+			sourceTree = "<group>";
+		};
+		A52897D22E24FA8C009C7044 /* NewOutlIineAndProgress */ = {
+			isa = PBXGroup;
+			children = (
+				A52897D32E24FA9F009C7044 /* CourseOutlineAndProgressView.swift */,
+				A52897D72E252349009C7044 /*  CourseOutlineAndProgressViewModel.swift */,
+			);
+			path = NewOutlIineAndProgress;
+			sourceTree = "<group>";
+		};
+		A5B468132F29DCA3002A4ECA /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				A5B468122F29DCA3002A4ECA /* CourseMocks.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		BA58CF622B471047005B102E /* VideoDownloadQualityBarView */ = {
+			isa = PBXGroup;
+			children = (
+				BA58CF602B471041005B102E /* VideoDownloadQualityBarView.swift */,
+				BA58CF632B471363005B102E /* VideoDownloadQualityContainerView.swift */,
+			);
+			path = VideoDownloadQualityBarView;
+			sourceTree = "<group>";
+		};
+		BAC0E0D92B32F0A2006B68A9 /* CourseVideoDownloadBarView */ = {
+			isa = PBXGroup;
+			children = (
+				BAD9CA492B2C88E000DE790A /* CourseVideoDownloadBarView.swift */,
+				BAC0E0DA2B32F0AE006B68A9 /* CourseVideoDownloadBarViewModel.swift */,
+			);
+			path = CourseVideoDownloadBarView;
+			sourceTree = "<group>";
+		};
+		BAC0E0DC2B32F0EA006B68A9 /* Downloads */ = {
+			isa = PBXGroup;
+			children = (
+				BAC0E0D72B32EF03006B68A9 /* DownloadsView.swift */,
+				BAC0E0DD2B32F0F3006B68A9 /* DownloadsViewModel.swift */,
+			);
+			path = Downloads;
+			sourceTree = "<group>";
+		};
+		BAD9CA462B2C888600DE790A /* CourseVertical */ = {
+			isa = PBXGroup;
+			children = (
+				06FD7EDE2B1F29F3008D632B /* CourseVerticalImageView.swift */,
+				02A8076729474831007F53AB /* CourseVerticalView.swift */,
+				0248C92629C097EB00DC8402 /* CourseVerticalViewModel.swift */,
+			);
+			path = CourseVertical;
+			sourceTree = "<group>";
+		};
+		BAD9CA482B2C88D500DE790A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A52897CF2E24F571009C7044 /* CourseCarouselView */,
+				9784D4762BF39EFD00AFEFFF /* DatesSuccessView */,
+				9784D4752BF39EEF00AFEFFF /* CalendarSyncProgressView */,
+				02D4FC2C2BBD7C7500C47748 /* MessageSectionView */,
+				BAC0E0D92B32F0A2006B68A9 /* CourseVideoDownloadBarView */,
+				BA58CF622B471047005B102E /* VideoDownloadQualityBarView */,
+				02FCB2B22BBEB36600373180 /* CourseHeaderView.swift */,
+				02BB20172BFCE7B200364948 /* CustomDisclosureGroup.swift */,
+				02E3803D2BFF9F0A00815AFA /* CourseProgressView.swift */,
+				02EBC7542C19CFCF00BE182C /* CalendarSyncStatusView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		CE1AC4002E055CCD00618645 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				CE1AC3FF2E055CCD00618645 /* CourseProgressScreenView.swift */,
+				CE1AC4062E05A36C00618645 /* CourseProgressViewModel.swift */,
+				CE1AC40B2E06DCC900618645 /* Elements */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		CE1AC40B2E06DCC900618645 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				A52897DF2E278D7D009C7044 /* ViewAllButton.swift */,
+				CE1AC41AFAF7140618645 /* CourseProgressCircleView.swift */,
+				CE1AC4082E06DCC900618645 /* GradeDetailsView.swift */,
+				CE1AC4092E06DCC900618645 /* GradeItemView.swift */,
+				A52897DD2E277A7C009C7044 /* GradeItemCarouselView.swift */,
+				CE1AC40A2E06DCC900618645 /* OverallGradeView.swift */,
+				CE1AC45E0EDBBF0618645 /* SegmentedProgressView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		CE4BA9152E0AC3790050F2C7 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BA91B2E0AE2960050F2C7 /* Subviews */,
+				CE4BA9182E0AC99A0050F2C7 /* Elements */,
+				CE4BA9142E0AC3790050F2C7 /* CourseContentView.swift */,
+				CECF38332E3A4BB100184EC4 /* Models */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		CE4BA9182E0AC99A0050F2C7 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CE5BBFED2E22A8AF00D51C92 /* AssignmentCardSmallView.swift */,
+				CE5BBFEB2E22A88900D51C92 /* AssignmentDetailCardView.swift */,
+				CE812FAC2E15168C00EDCC63 /* VideoThumbnailView.swift */,
+				CE812FAA2E15157600EDCC63 /* VideoSectionView.swift */,
+				CE4BA9172E0AC99A0050F2C7 /* ContentSegmentedControl.swift */,
+				CE4BA91D2E0AED930050F2C7 /* CustomProgressShape.swift */,
+				CE4BA91F2E0AF22A0050F2C7 /* SectionProgressView.swift */,
+				CEAB6BDB2E19695D00E8E898 /* NoContentAvailable.swift */,
+				CEAB6C3B2E1D3B3900E8E899 /* ProgressAssignmentTypeSection.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		CE4BA91B2E0AE2960050F2C7 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BA91A2E0AE2960050F2C7 /* AllContentView.swift */,
+				CE02086B2E0EC88C005999E2 /* VideosContentView.swift */,
+				CEAB6C302E1D3B2700E8E898 /* AssignmentsContentView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		CE6386622D07215100C01D69 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CE63866D2D07220600C01D69 /* CourseDateStyleBlock.swift */,
+				CE63866B2D0721D600C01D69 /* BlockStatusView.swift */,
+				CE6386692D0721B600C01D69 /* CompletedBlocks.swift */,
+				CE6386672D07219B00C01D69 /* CourseDateListView.swift */,
+				CE6386632D07215E00C01D69 /* Line.swift */,
+				CE6386652D07217300C01D69 /* TimeLineView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		CECF38332E3A4BB100184EC4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CECF38352E3A545B00184EC4 /* AssignmentContentData.swift */,
+				CECF38322E3A4BB100184EC4 /* VideoContentData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D52670044E8768425E23C627 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A55620C6018088BFF77F9AE /* Pods-App-CourseDetails.debug.xcconfig */,
+				99AEF08FD75F1509863D3302 /* Pods-App-CourseDetails.debugprod.xcconfig */,
+				51A3A7BA0FC6386531BE678A /* Pods-App-CourseDetails.debugdev.xcconfig */,
+				69A261790A0B4C724CCFA4F2 /* Pods-App-CourseDetails.release.xcconfig */,
+				B196A14555D0E006995A5683 /* Pods-App-CourseDetails.releaseprod.xcconfig */,
+				9B5D3D31A9CFA08B6C4347BD /* Pods-App-CourseDetails.releasedev.xcconfig */,
+				ADC2A1B8183A674705F5F7E2 /* Pods-App-Course.debug.xcconfig */,
+				E954A304FDC0409BEC34C125 /* Pods-App-Course.debugprod.xcconfig */,
+				EDCFD7A1BFD2200B14F10F71 /* Pods-App-Course.debugdev.xcconfig */,
+				F4640D6B8065C404E0BC30D5 /* Pods-App-Course.release.xcconfig */,
+				F496B47B12CFD866EA6845CC /* Pods-App-Course.releaseprod.xcconfig */,
+				4D2F08669DD2579EAAE02E2F /* Pods-App-Course.releasedev.xcconfig */,
+				DBE05972CB5115D4535C6B8A /* Pods-App-Course-CourseTests.debug.xcconfig */,
+				418D00932369361311AEEBD3 /* Pods-App-Course-CourseTests.debugprod.xcconfig */,
+				600A464AEDA7BEFEC1A7FE99 /* Pods-App-Course-CourseTests.debugdev.xcconfig */,
+				E6BDAE887ED8A46860B3F6D3 /* Pods-App-Course-CourseTests.release.xcconfig */,
+				4DD47D29A4059C1222E8B7D2 /* Pods-App-Course-CourseTests.releaseprod.xcconfig */,
+				2A444220A08C5035164B071F /* Pods-App-Course-CourseTests.releasedev.xcconfig */,
+				3D506212980347A9D5A70E20 /* Pods-App-Course.debugstage.xcconfig */,
+				A47C63D9EB0D866F303D4588 /* Pods-App-Course.releasestage.xcconfig */,
+				831B08139890634968EDD44D /* Pods-App-Course-CourseTests.debugstage.xcconfig */,
+				EBB67646EDD08315BA7B3DC5 /* Pods-App-Course-CourseTests.releasestage.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		DB7D6EAA2ADFCAA00036BB13 /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				CE6386622D07215100C01D69 /* Elements */,
+				DB7D6EAB2ADFCAC40036BB13 /* CourseDatesView.swift */,
+				97E7DF0E2B7C852A00A2A09B /* DatesStatusInfoView.swift */,
+				DB7D6EAD2ADFCB4A0036BB13 /* CourseDatesViewModel.swift */,
+			);
+			path = Dates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0289F8E928E1C3510064F8F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		023812E3297AC8EA0087098F /* CourseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 023812F1297AC8EB0087098F /* Build configuration list for PBXNativeTarget "CourseTests" */;
+			buildPhases = (
+				EBA99FC2A045E19AF88DF2E7 /* [CP] Check Pods Manifest.lock */,
+				023812E0297AC8EA0087098F /* Sources */,
+				023812E1297AC8EA0087098F /* Frameworks */,
+				023812E2297AC8EA0087098F /* Resources */,
+				CE7CAF432CC1563500E0AC9D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				023812EA297AC8EB0087098F /* PBXTargetDependency */,
+			);
+			name = CourseTests;
+			productName = CourseTests;
+			productReference = 023812E4297AC8EA0087098F /* CourseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0289F8ED28E1C3510064F8F3 /* Course */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0289F8F528E1C3510064F8F3 /* Build configuration list for PBXNativeTarget "Course" */;
+			buildPhases = (
+				B2836B9489F24D888A56D857 /* [CP] Check Pods Manifest.lock */,
+				0289F8E928E1C3510064F8F3 /* Headers */,
+				0289F90028E1C3B60064F8F3 /* SwiftGen */,
+				0289F8EA28E1C3510064F8F3 /* Sources */,
+				0289F8EB28E1C3510064F8F3 /* Frameworks */,
+				0289F8EC28E1C3510064F8F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Course;
+			productName = CourseDetails;
+			productReference = 0289F8EE28E1C3510064F8F3 /* Course.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0289F8E528E1C3510064F8F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					023812E3297AC8EA0087098F = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					0289F8ED28E1C3510064F8F3 = {
+						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
+					};
+				};
+			};
+			buildConfigurationList = 0289F8E828E1C3510064F8F3 /* Build configuration list for PBXProject "Course" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				uk,
+			);
+			mainGroup = 0289F8E428E1C3510064F8F3;
+			packageReferences = (
+				CEBCA4322CC13CDE00076589 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+				CEB1E2712CC14EC400921517 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */,
+			);
+			productRefGroup = 0289F8EF28E1C3510064F8F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0289F8ED28E1C3510064F8F3 /* Course */,
+				023812E3297AC8EA0087098F /* CourseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		023812E2297AC8EA0087098F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0289F8EC28E1C3510064F8F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0289F90228E1C3E10064F8F3 /* swiftgen.yml in Resources */,
+				02B6B3B228E1C49400232911 /* Localizable.strings in Resources */,
+				02C355392C08DCD700501342 /* Localizable.stringsdict in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0289F90028E1C3B60064F8F3 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
+		92C3B3183886DDECE1CBAC22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2836B9489F24D888A56D857 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App-Course-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA99FC2A045E19AF88DF2E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App-Course-CourseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		023812E0297AC8EA0087098F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0295B1D9297E6DF8003B0C65 /* CourseUnitViewModelTests.swift in Sources */,
+				065D575D2D4442D700350351 /* CourseDownloadHelperTests.swift in Sources */,
+				CE4BA8832E0806380050F2C7 /* CourseProgressViewModelTests.swift in Sources */,
+				02F78AEB29E6BCA20038DE30 /* VideoPlayerViewModelTests.swift in Sources */,
+				A5B468142F29DCA3002A4ECA /* CourseMocks.generated.swift in Sources */,
+				DB205BFB2AE81B1200136EC2 /* CourseDateViewModelTests.swift in Sources */,
+				022EA8CB297AD63B0014A8F7 /* CourseContainerViewModelTests.swift in Sources */,
+				0262148F29AE17C4008BD75A /* HandoutsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0289F8EA28E1C3510064F8F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06FD7EE32B1F3FF6008D632B /* DropdownAnimationModifier.swift in Sources */,
+				067B7B542BED339200D1768F /* YoutubePlayerViewControllerHolder.swift in Sources */,
+				02FFAD0D29E4347300140E46 /* VideoPlayerViewModel.swift in Sources */,
+				02454CA42A26193F0043052A /* WebView.swift in Sources */,
+				022C64DA29ACEC50000F532B /* HandoutsViewModel.swift in Sources */,
+				02635AC72A24F181008062F2 /* ContinueWithView.swift in Sources */,
+				068DDA622B1E198700FF8CCB /* CourseUnitDropDownTitle.swift in Sources */,
+				BAD9CA4A2B2C88E000DE790A /* CourseVideoDownloadBarView.swift in Sources */,
+				022C64DE29AD167A000F532B /* HandoutsUpdatesDetailView.swift in Sources */,
+				BA58CF612B471041005B102E /* VideoDownloadQualityBarView.swift in Sources */,
+				CE5BBFEC2E22A88900D51C92 /* AssignmentDetailCardView.swift in Sources */,
+				02FF6FA72C20BFF800E44DD8 /* OfflineView.swift in Sources */,
+				0270210328E736E700F54332 /* CourseOutlineView.swift in Sources */,
+				068DDA602B1E198700FF8CCB /* CourseUnitVerticalsDropdownView.swift in Sources */,
+				CE6386662D07217300C01D69 /* TimeLineView.swift in Sources */,
+				067B7B512BED339200D1768F /* PipManagerProtocol.swift in Sources */,
+				022C64E029ADEA9B000F532B /* Data_UpdatesResponse.swift in Sources */,
+				02D4FC2E2BBD7C9C00C47748 /* MessageSectionView.swift in Sources */,
+				0631FF982D2BE67F007CA011 /* CourseDownloadHelper.swift in Sources */,
+				02454CA02A2618E70043052A /* YouTubeView.swift in Sources */,
+				02454CA22A26190A0043052A /* EncodedVideoView.swift in Sources */,
+				065275352BB1B39C0093BCCA /* PlayerViewControllerHolder.swift in Sources */,
+				068DDA612B1E198700FF8CCB /* CourseUnitDropDownCell.swift in Sources */,
+				CE6386682D07219B00C01D69 /* CourseDateListView.swift in Sources */,
+				BAC0E0DE2B32F0F3006B68A9 /* DownloadsViewModel.swift in Sources */,
+				02B6B3BC28E1D14F00232911 /* CourseRepository.swift in Sources */,
+				02280F60294B50030032823A /* CoursePersistenceProtocol.swift in Sources */,
+				A5A510A22E66E8D600553607 /* CourseVideoCarouselSlideView.swift in Sources */,
+				CE1AC4032E05A33D00618645 /* Data_CourseProgressResponse.swift in Sources */,
+				02454CAA2A2619B40043052A /* LessonProgressView.swift in Sources */,
+				975F475E2B6151FD00E5B031 /* CourseDatesMock.swift in Sources */,
+				02FF6FAA2C20D56A00E44DD8 /* TotalDownloadedProgressView.swift in Sources */,
+				975F47602B615DA700E5B031 /* CourseStructureMock.swift in Sources */,
+				A59016D52E69B2E900076220 /* VideoNavigationView.swift in Sources */,
+				02280F5E294B4FDA0032823A /* CourseCoreModel.xcdatamodeld in Sources */,
+				0766DFCE299AB26D00EBEF6A /* EncodedVideoPlayer.swift in Sources */,
+				A5A510A42E6728AD00553607 /* CourseAssignmentsCarouselSlideView.swift in Sources */,
+				02C7B1D82C271A7000D2A7BB /* OfflineContentView.swift in Sources */,
+				0276D75B29DDA3890004CDF8 /* Data_ResumeBlock.swift in Sources */,
+				0276D75D29DDA3F80004CDF8 /* ResumeBlock.swift in Sources */,
+				CECF38362E3A545B00184EC4 /* AssignmentContentData.swift in Sources */,
+				02F3BFDD29252E900051930C /* CourseRouter.swift in Sources */,
+				068DDA5F2B1E198700FF8CCB /* CourseUnitDropDownList.swift in Sources */,
+				CEAB6C312E1D3B2700E8E898 /* AssignmentsContentView.swift in Sources */,
+				CE1AC4072E05A36C00618645 /* CourseProgressViewModel.swift in Sources */,
+				022F8E182A1E2642008EFAB9 /* EncodedVideoPlayerViewModel.swift in Sources */,
+				0248C92729C097EB00DC8402 /* CourseVerticalViewModel.swift in Sources */,
+				CE812FAD2E15168C00EDCC63 /* VideoThumbnailView.swift in Sources */,
+				02B6B3B728E1D11E00232911 /* CourseInteractor.swift in Sources */,
+				073512E229C0E400005CFA41 /* BaseCourseViewModel.swift in Sources */,
+				CEAB6C3A2E1D3B3900E8E899 /* ProgressAssignmentTypeSection.swift in Sources */,
+				CEAB6C3C2E1D3B3900E8E800 /* AssignmentCardStatus.swift in Sources */,
+				0231124F28EDA811002588FB /* CourseUnitViewModel.swift in Sources */,
+				CE6386642D07215E00C01D69 /* Line.swift in Sources */,
+				CECF38382E3A73C200184EC4 /* VideoThumbnailService.swift in Sources */,
+				CE02086C2E0EC88C005999E2 /* VideosContentView.swift in Sources */,
+				02A8076829474831007F53AB /* CourseVerticalView.swift in Sources */,
+				97E7DF0F2B7C852A00A2A09B /* DatesStatusInfoView.swift in Sources */,
+				067B7B4F2BED339200D1768F /* PlayerDelegateProtocol.swift in Sources */,
+				0231124D28EDA804002588FB /* CourseUnitView.swift in Sources */,
+				027020FC28E7362100F54332 /* Data_CourseOutlineResponse.swift in Sources */,
+				067B7B532BED339200D1768F /* PlayerServiceProtocol.swift in Sources */,
+				A52897D42E24FA9F009C7044 /* CourseOutlineAndProgressView.swift in Sources */,
+				A52897DE2E277A7C009C7044 /* GradeItemCarouselView.swift in Sources */,
+				BAD9CA2D2B2736BB00DE790A /* LessonLineProgressView.swift in Sources */,
+				02197DC52C1AFC0600CC8FF2 /* CalendarSyncStatusView.swift in Sources */,
+				060E8BCA2B5FD68C0080C952 /* UnitStack.swift in Sources */,
+				A5A510A62E672E4A00553607 /* AssignmentCarouselDetailCardView.swift in Sources */,
+				CE4BA91C2E0AE2960050F2C7 /* AllContentView.swift in Sources */,
+				CE812FAB2E15157600EDCC63 /* VideoSectionView.swift in Sources */,
+				02228B2F2C221412009A5F28 /* LargestDownloadsView.swift in Sources */,
+				0295C889299BBE8200ABE571 /* CourseNavigationView.swift in Sources */,
+				CE83F7A02E5DD516004E0F7B /* CourseContainerViewModel.swift in Sources */,
+				CE83F79E2E5DD4AD004E0F7B /* CourseContainerView.swift in Sources */,
+				CE1AC4012E055CCD00618645 /* CourseProgressScreenView.swift in Sources */,
+				06FD7EDF2B1F29F3008D632B /* CourseVerticalImageView.swift in Sources */,
+				BAC0E0DB2B32F0AE006B68A9 /* CourseVideoDownloadBarViewModel.swift in Sources */,
+				DB7D6EAE2ADFCB4A0036BB13 /* CourseDatesViewModel.swift in Sources */,
+				067B7B522BED339200D1768F /* SubtitlesView.swift in Sources */,
+				CE63866E2D07220600C01D69 /* CourseDateStyleBlock.swift in Sources */,
+				CE63866C2D0721D600C01D69 /* BlockStatusView.swift in Sources */,
+				CEAB6C2F2E1D242100E8E898 /* CourseProgressDetails.swift in Sources */,
+				CE4BA9202E0AF22A0050F2C7 /* SectionProgressView.swift in Sources */,
+				07DE59862BECB868001CBFBC /* CourseAnalytics.swift in Sources */,
+				02BB20182BFCE7B200364948 /* CustomDisclosureGroup.swift in Sources */,
+				CEAB6BDC2E19695D00E8E898 /* NoContentAvailable.swift in Sources */,
+				CE4BA91E2E0AED930050F2C7 /* CustomProgressShape.swift in Sources */,
+				022C64E229ADEB83000F532B /* CourseUpdate.swift in Sources */,
+				A52897DC2E276B12009C7044 /* CourseGradeCarouselSlideView.swift in Sources */,
+				CE4BA9192E0AC99A0050F2C7 /* ContentSegmentedControl.swift in Sources */,
+				CE5BBFF22E22C91000D51C92 /* AssignmentSection.swift in Sources */,
+				BA58CF642B471363005B102E /* VideoDownloadQualityContainerView.swift in Sources */,
+				BA58CF5D2B3D804D005B102E /* CourseStorage.swift in Sources */,
+				A52897D82E252357009C7044 /*  CourseOutlineAndProgressViewModel.swift in Sources */,
+				067B7B502BED339200D1768F /* PlayerControllerProtocol.swift in Sources */,
+				067B7B4E2BED339200D1768F /* PlayerTrackerProtocol.swift in Sources */,
+				CE4BA9162E0AC3790050F2C7 /* CourseContentView.swift in Sources */,
+				02454CA62A26196C0043052A /* NotAvailableOnMobileView.swift in Sources */,
+				0766DFD0299AB29000EBEF6A /* PlayerViewController.swift in Sources */,
+				CE5BBFEE2E22A8AF00D51C92 /* AssignmentCardSmallView.swift in Sources */,
+				022C64DC29ACFDEE000F532B /* Data_HandoutsResponse.swift in Sources */,
+				022C64D829ACEC48000F532B /* HandoutsView.swift in Sources */,
+				CE1AC40C2E06DCC900618645 /* OverallGradeView.swift in Sources */,
+				CE1AC40D2E06DCC900618645 /* GradeItemView.swift in Sources */,
+				CE1AC40E2E06DCC900618645 /* GradeDetailsView.swift in Sources */,
+				CE1AC41BFAF7140618645 /* CourseProgressCircleView.swift in Sources */,
+				CE1AC45F0EDBBF0618645 /* SegmentedProgressView.swift in Sources */,
+				02454CA82A2619890043052A /* DiscussionView.swift in Sources */,
+				0265B4B728E2141D00E6EAFD /* Strings.swift in Sources */,
+				97C99C362B9A08FE004EEDE2 /* CalendarSyncProgressView.swift in Sources */,
+				BAC0E0D82B32EF03006B68A9 /* DownloadsView.swift in Sources */,
+				97CA95252B875EE200A9EDEA /* DatesSuccessView.swift in Sources */,
+				A52897E02E278D7D009C7044 /* ViewAllButton.swift in Sources */,
+				CECF38342E3A4BB100184EC4 /* VideoContentData.swift in Sources */,
+				02FCB2B32BBEB36600373180 /* CourseHeaderView.swift in Sources */,
+				DB7D6EAC2ADFCAC50036BB13 /* CourseDatesView.swift in Sources */,
+				CE1AC4052E05A35000618645 /* CourseProgressDetails.swift in Sources */,
+				0766DFCC299AA7A600EBEF6A /* YouTubeVideoPlayer.swift in Sources */,
+				02E3803E2BFF9F0A00815AFA /* CourseProgressView.swift in Sources */,
+				022F8E162A1DFBC6008EFAB9 /* YouTubeVideoPlayerViewModel.swift in Sources */,
+				02B6B3BE28E1D15C00232911 /* CourseEndpoint.swift in Sources */,
+				CE63866A2D0721B600C01D69 /* CompletedBlocks.swift in Sources */,
+				A52897D12E24F5C1009C7044 /* CourseCompletionCarouselSlideView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		023812EA297AC8EB0087098F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 0289F8ED28E1C3510064F8F3 /* Course */;
+			targetProxy = 023812E9297AC8EB0087098F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02B6B3B428E1C49400232911 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02B6B3B328E1C49400232911 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		02C355372C08DCD700501342 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02C355382C08DCD700501342 /* en */,
+				02C3553A2C08DCE000501342 /* uk */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		023812EB297AC8EB0087098F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBE05972CB5115D4535C6B8A /* Pods-App-Course-CourseTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		023812EC297AC8EB0087098F /* DebugProd */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 418D00932369361311AEEBD3 /* Pods-App-Course-CourseTests.debugprod.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugProd;
+		};
+		023812ED297AC8EB0087098F /* DebugDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 600A464AEDA7BEFEC1A7FE99 /* Pods-App-Course-CourseTests.debugdev.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugDev;
+		};
+		023812EE297AC8EB0087098F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BDAE887ED8A46860B3F6D3 /* Pods-App-Course-CourseTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		023812EF297AC8EB0087098F /* ReleaseProd */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD47D29A4059C1222E8B7D2 /* Pods-App-Course-CourseTests.releaseprod.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseProd;
+		};
+		023812F0297AC8EB0087098F /* ReleaseDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A444220A08C5035164B071F /* Pods-App-Course-CourseTests.releasedev.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseDev;
+		};
+		0289F8F328E1C3510064F8F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0289F8F428E1C3510064F8F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0289F8F628E1C3510064F8F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADC2A1B8183A674705F5F7E2 /* Pods-App-Course.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0289F8F728E1C3510064F8F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4640D6B8065C404E0BC30D5 /* Pods-App-Course.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0289F8F828E1C3750064F8F3 /* DebugDev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = DebugDev;
+		};
+		0289F8F928E1C3750064F8F3 /* DebugDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCFD7A1BFD2200B14F10F71 /* Pods-App-Course.debugdev.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugDev;
+		};
+		0289F8FA28E1C37B0064F8F3 /* DebugProd */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = DebugProd;
+		};
+		0289F8FB28E1C37B0064F8F3 /* DebugProd */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E954A304FDC0409BEC34C125 /* Pods-App-Course.debugprod.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugProd;
+		};
+		0289F8FC28E1C3830064F8F3 /* ReleaseDev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = ReleaseDev;
+		};
+		0289F8FD28E1C3830064F8F3 /* ReleaseDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D2F08669DD2579EAAE02E2F /* Pods-App-Course.releasedev.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseDev;
+		};
+		0289F8FE28E1C3880064F8F3 /* ReleaseProd */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = ReleaseProd;
+		};
+		0289F8FF28E1C3880064F8F3 /* ReleaseProd */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F496B47B12CFD866EA6845CC /* Pods-App-Course.releaseprod.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseProd;
+		};
+		02DD1CB729E80D4200F35DCE /* DebugStage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = DebugStage;
+		};
+		02DD1CB829E80D4200F35DCE /* DebugStage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D506212980347A9D5A70E20 /* Pods-App-Course.debugstage.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugStage;
+		};
+		02DD1CB929E80D4200F35DCE /* DebugStage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831B08139890634968EDD44D /* Pods-App-Course-CourseTests.debugstage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugStage;
+		};
+		02DD1CBA29E80D4700F35DCE /* ReleaseStage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = ReleaseStage;
+		};
+		02DD1CBB29E80D4700F35DCE /* ReleaseStage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A47C63D9EB0D866F303D4588 /* Pods-App-Course.releasestage.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseDetails;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseStage;
+		};
+		02DD1CBC29E80D4700F35DCE /* ReleaseStage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB67646EDD08315BA7B3DC5 /* Pods-App-Course-CourseTests.releasestage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L8PG7LC3Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openedx.CourseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseStage;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		023812F1297AC8EB0087098F /* Build configuration list for PBXNativeTarget "CourseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				023812EB297AC8EB0087098F /* Debug */,
+				023812EC297AC8EB0087098F /* DebugProd */,
+				02DD1CB929E80D4200F35DCE /* DebugStage */,
+				023812ED297AC8EB0087098F /* DebugDev */,
+				023812EE297AC8EB0087098F /* Release */,
+				023812EF297AC8EB0087098F /* ReleaseProd */,
+				02DD1CBC29E80D4700F35DCE /* ReleaseStage */,
+				023812F0297AC8EB0087098F /* ReleaseDev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0289F8E828E1C3510064F8F3 /* Build configuration list for PBXProject "Course" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0289F8F328E1C3510064F8F3 /* Debug */,
+				0289F8FA28E1C37B0064F8F3 /* DebugProd */,
+				02DD1CB729E80D4200F35DCE /* DebugStage */,
+				0289F8F828E1C3750064F8F3 /* DebugDev */,
+				0289F8F428E1C3510064F8F3 /* Release */,
+				0289F8FE28E1C3880064F8F3 /* ReleaseProd */,
+				02DD1CBA29E80D4700F35DCE /* ReleaseStage */,
+				0289F8FC28E1C3830064F8F3 /* ReleaseDev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0289F8F528E1C3510064F8F3 /* Build configuration list for PBXNativeTarget "Course" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0289F8F628E1C3510064F8F3 /* Debug */,
+				0289F8FB28E1C37B0064F8F3 /* DebugProd */,
+				02DD1CB829E80D4200F35DCE /* DebugStage */,
+				0289F8F928E1C3750064F8F3 /* DebugDev */,
+				0289F8F728E1C3510064F8F3 /* Release */,
+				0289F8FF28E1C3880064F8F3 /* ReleaseProd */,
+				02DD1CBB29E80D4700F35DCE /* ReleaseStage */,
+				0289F8FD28E1C3830064F8F3 /* ReleaseDev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEB1E2712CC14EC400921517 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openedx/openedx-app-foundation-ios/";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.4;
+			};
+		};
+		CEBCA4322CC13CDE00076589 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE7CAF402CC1563500E0AC9D /* OEXFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB1E2712CC14EC400921517 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */;
+			productName = OEXFoundation;
+		};
+		CEB1E2722CC14EC400921517 /* OEXFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB1E2712CC14EC400921517 /* XCRemoteSwiftPackageReference "openedx-app-foundation-ios" */;
+			productName = OEXFoundation;
+		};
+		CEBCA4332CC13CDE00076589 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCA4322CC13CDE00076589 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		02280F5C294B4FDA0032823A /* CourseCoreModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02280F5D294B4FDA0032823A /* CourseCoreModel.xcdatamodel */,
+			);
+			currentVersion = 02280F5D294B4FDA0032823A /* CourseCoreModel.xcdatamodel */;
+			path = CourseCoreModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0289F8E528E1C3510064F8F3 /* Project object */;
+}

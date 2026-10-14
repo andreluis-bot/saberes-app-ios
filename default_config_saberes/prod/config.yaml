@@ -1,0 +1,26 @@
+# Saberes INTERSSAN — app iOS, ambiente prod
+API_HOST_URL: https://saberes.interssan.org
+SSO_URL: https://saberes.interssan.org
+SSO_FINISHED_URL: https://saberes.interssan.org
+ENVIRONMENT_DISPLAY_NAME: Saberes
+FEEDBACK_EMAIL_ADDRESS: adm@interssan.org
+OAUTH_CLIENT_ID: saberes-app-movel
+SSO_BUTTON_TITLE:
+  ar: الدخول عبر SSO
+  en: Sign in with SSO
+APP_LEVEL_DATES_ENABLED: true
+EXPERIMENTAL_FEATURES:
+  APP_LEVEL_DOWNLOADS:
+    ENABLED: false
+UI_COMPONENTS:
+  COURSE_UNIT_PROGRESS_ENABLED: true
+  COURSE_NESTED_LIST_ENABLED: false
+  LOGIN_REGISTRATION_ENABLED: true
+  SAML_SSO_LOGIN_ENABLED: false
+  SAML_SSO_DEFAULT_LOGIN_BUTTON: false
+IS_SWITCH_INSTANCE_LOGIN_ENABLED: false
+AGREEMENT_URLS:
+  PRIVACY_POLICY_URL: https://saberes.interssan.org/privacy
+  COOKIE_POLICY_URL: https://saberes.interssan.org/privacy#cookies
+  TOS_URL: https://saberes.interssan.org/tos
+  SUPPORTED_LANGUAGES: []
