@@ -24,6 +24,10 @@ DISCOVERY:
   TYPE: native
 DASHBOARD:
   TYPE: gallery
+GOOGLE:
+  ENABLED: true
+  CLIENT_ID: 813723563528-9bks8rt4ku9hfvhtmuh9ht87br8kpg3u.apps.googleusercontent.com
+  GOOGLE_PLUS_KEY: 813723563528-9bks8rt4ku9hfvhtmuh9ht87br8kpg3u.apps.googleusercontent.com
 AGREEMENT_URLS:
   PRIVACY_POLICY_URL: https://saberes.interssan.org/privacy
   COOKIE_POLICY_URL: https://saberes.interssan.org/privacy#cookies

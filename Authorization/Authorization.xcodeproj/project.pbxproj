@@ -71,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01FF4209A1CEF089D9277B12 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		02066B432906D72400F4307E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		02066B452906D72F00F4307E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		020C31CA290BF49900D6DEA2 /* FieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsView.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		0E586C84FB9FFDD8AAE29BB3 /* Pods-App-Authorization-AuthorizationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Authorization-AuthorizationTests.debug.xcconfig"; path = "Target Support Files/Pods-App-Authorization-AuthorizationTests/Pods-App-Authorization-AuthorizationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CB6628EDEAAC2431CD50D9A /* Pods-App-Authorization-AuthorizationTests.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Authorization-AuthorizationTests.debugprod.xcconfig"; path = "Target Support Files/Pods-App-Authorization-AuthorizationTests/Pods-App-Authorization-AuthorizationTests.debugprod.xcconfig"; sourceTree = "<group>"; };
 		1CD50AA5CB635FD7200C4DF9 /* Pods-App-Authorization.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Authorization.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Authorization/Pods-App-Authorization.debugstage.xcconfig"; sourceTree = "<group>"; };
-		2C1A4465BBFFC343CFA0FC82 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2F1206D6806C156203F01524 /* Pods-App-Authorization-AuthorizationTests.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Authorization-AuthorizationTests.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Authorization-AuthorizationTests/Pods-App-Authorization-AuthorizationTests.debugstage.xcconfig"; sourceTree = "<group>"; };
 		37CBD3ECE7D9B20E0BC61344 /* Pods-App-Authorization-AuthorizationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Authorization-AuthorizationTests.release.xcconfig"; path = "Target Support Files/Pods-App-Authorization-AuthorizationTests/Pods-App-Authorization-AuthorizationTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E0D103D8210828583660AF6 /* Pods-App-Authorization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Authorization.debug.xcconfig"; path = "Target Support Files/Pods-App-Authorization/Pods-App-Authorization.debug.xcconfig"; sourceTree = "<group>"; };
@@ -609,7 +609,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0770DE6C28D0C035006D8A5D /* en */,
-				2C1A4465BBFFC343CFA0FC82 /* pt-BR */,
+				01FF4209A1CEF089D9277B12 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
