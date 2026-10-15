@@ -145,7 +145,7 @@
 		6EAAEFD45AC766684492B1F7 /* Pods-App-OpenEdX.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.releasestage.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.releasestage.xcconfig"; sourceTree = "<group>"; };
 		84185F0B853BA4F0A8C0217C /* Pods-App-OpenEdX.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		8A39EAD8663E6F16A59AF82E /* Pods-App-OpenEdX.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-OpenEdX.releasedev.xcconfig"; path = "Target Support Files/Pods-App-OpenEdX/Pods-App-OpenEdX.releasedev.xcconfig"; sourceTree = "<group>"; };
-		A04B4676887E2B29FA329CA1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A1644740992954EC1063F7C2 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A500668A2B613ED10024680B /* PushNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsManager.swift; sourceTree = "<group>"; };
 		A500668C2B6143000024680B /* FCMProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMProvider.swift; sourceTree = "<group>"; };
 		A50066922B614DCD0024680B /* FCMListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMListener.swift; sourceTree = "<group>"; };
@@ -628,7 +628,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0770DE6528D0BCC7006D8A5D /* en */,
-				A04B4676887E2B29FA329CA1 /* pt-BR */,
+				A1644740992954EC1063F7C2 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

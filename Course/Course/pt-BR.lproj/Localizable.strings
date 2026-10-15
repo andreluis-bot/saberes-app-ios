@@ -9,10 +9,10 @@
 "COURSEWARE.PREVIOUS" = "Anterior";
 "COURSEWARE.PREVIOUS_FULL" = "Anterior";
 "COURSEWARE.FINISH" = "Terminar";
-"COURSEWARE.GOOD_WORK" = "Bom trabalho!";
-"COURSEWARE.BACK_TO_OUTLINE" = "Voltar ao esboço";
-"COURSEWARE.SECTION" = "Você completou “";
-"COURSEWARE.IS_FINISHED" = "“.";
+"COURSEWARE.GOOD_WORK" = "Fim da seção";
+"COURSEWARE.BACK_TO_OUTLINE" = "Voltar ao roteiro do curso";
+"COURSEWARE.SECTION" = "Você chegou ao fim de “";
+"COURSEWARE.IS_FINISHED" = "”. Se ficou alguma atividade para trás, volte a ela pelo roteiro do curso.";
 "COURSEWARE.CONTINUE" = "Continuar";
 "COURSEWARE.RESUME_WITH" = "Retomar com:";
 "ERROR.NO_INTERNET" = "Você não está conectado à Internet. Por favor, verifique sua conexão à internet.";

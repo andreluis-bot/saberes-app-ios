@@ -93,9 +93,9 @@
 		0C3850985F33C1AD72BF1B04 /* Pods-App-Discovery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery.release.xcconfig"; path = "Target Support Files/Pods-App-Discovery/Pods-App-Discovery.release.xcconfig"; sourceTree = "<group>"; };
 		1402A0C72B61012F00A0A00B /* ProgramWebviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramWebviewView.swift; sourceTree = "<group>"; };
 		1402A0C82B61012F00A0A00B /* ProgramWebviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramWebviewViewModel.swift; sourceTree = "<group>"; };
-		1A2E4F3DB7EA59636D34E60E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2334C76D248D0A95634AFFD9 /* Pods-App-Discovery-DiscoveryUnitTests.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery-DiscoveryUnitTests.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Discovery-DiscoveryUnitTests/Pods-App-Discovery-DiscoveryUnitTests.debugstage.xcconfig"; sourceTree = "<group>"; };
 		2760B1F234E01FFCB73F41C2 /* Pods-App-Discovery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery.debug.xcconfig"; path = "Target Support Files/Pods-App-Discovery/Pods-App-Discovery.debug.xcconfig"; sourceTree = "<group>"; };
+		33244BA8887B3133F3C6C5A1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		445F0675BF0E1DEB78F3CE73 /* Pods-App-Discovery-DiscoveryUnitTests.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery-DiscoveryUnitTests.releasedev.xcconfig"; path = "Target Support Files/Pods-App-Discovery-DiscoveryUnitTests/Pods-App-Discovery-DiscoveryUnitTests.releasedev.xcconfig"; sourceTree = "<group>"; };
 		4786022BA3ED2D55DD0E5C8F /* Pods-App-Discovery.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery.debugdev.xcconfig"; path = "Target Support Files/Pods-App-Discovery/Pods-App-Discovery.debugdev.xcconfig"; sourceTree = "<group>"; };
 		57E62A3FCA858F5A1FF77347 /* Pods-App-Discovery.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-Discovery/Pods-App-Discovery.releaseprod.xcconfig"; sourceTree = "<group>"; };
@@ -602,7 +602,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02EF39D828D86A380058F6BD /* en */,
-				1A2E4F3DB7EA59636D34E60E /* pt-BR */,
+				33244BA8887B3133F3C6C5A1 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
