@@ -60,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0FE6429CAFF3572C5BACE7CF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		123278802021B24B608B2BBC /* Pods-App-AppDates.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.releasedev.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.releasedev.xcconfig"; sourceTree = "<group>"; };
 		14161693326A93866BB01A36 /* Pods-App-AppDates-AppDatesTests.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates-AppDatesTests.releasestage.xcconfig"; path = "Target Support Files/Pods-App-AppDates-AppDatesTests/Pods-App-AppDates-AppDatesTests.releasestage.xcconfig"; sourceTree = "<group>"; };
 		200A76876806F62C2118F49E /* Pods-App-AppDates-AppDatesTests.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates-AppDatesTests.debugdev.xcconfig"; path = "Target Support Files/Pods-App-AppDates-AppDatesTests/Pods-App-AppDates-AppDatesTests.debugdev.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		CE86499D2DA57A1C00821EC9 /* AppDates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDates.h; sourceTree = "<group>"; };
 		CE86499E2DA57A1C00821EC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8649A12DA57A1C00821EC9 /* DatesCoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DatesCoreModel.xcdatamodel; sourceTree = "<group>"; };
-		DC0D475CA0B5AB14C0249322 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ED203AA9F3F382E5A5779E5F /* Pods-App-AppDates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.release.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -521,7 +521,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE86499E2DA57A1C00821EC9 /* en */,
-				DC0D475CA0B5AB14C0249322 /* pt-BR */,
+				0FE6429CAFF3572C5BACE7CF /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
