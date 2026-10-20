@@ -292,7 +292,8 @@ public struct PrimaryCourseDashboardView<ProgramView: View>: View {
         })
     }
     
-    // MARK: - Saberes (pedido 150, parte 2 — igual ao Android SaberesInicio.kt / SaberesContinuar.kt; patch inicio.patch)
+    // MARK: - Saberes (pedido 150, parte 2 — igual ao Android SaberesInicio.kt / SaberesContinuar.kt)
+    // Vem do patch saberes-ios/patches/inicio.patch.
 
     // (calculadas: tipo genérico não aceita propriedade estática guardada)
     private static var tinta: Color { Color(red: 10/255, green: 42/255, blue: 56/255) }    // #0A2A38

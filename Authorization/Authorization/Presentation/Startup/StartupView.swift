@@ -37,7 +37,8 @@ public struct StartupView: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .accessibilityAddTraits(.isHeader)
                             .accessibilityIdentifier("heading_text")
-                        Text("Cursos gratuitos da UNESP sobre Segurança Alimentar e Nutricional, no seu ritmo e com certificado.")
+                        Text("Cursos gratuitos da UNESP sobre Segurança Alimentar e Nutricional, "
+                             + "no seu ritmo e com certificado.")
                             .font(.custom("Saberes-Regular", size: 15))
                             .foregroundColor(SaberesCor.textoSuave)
                             .lineSpacing(4)
@@ -156,7 +157,9 @@ public struct StartupView: View {
     private func saberesSelo(_ texto: String, icone: String) -> some View {
         HStack(spacing: 5) {
             Image(systemName: icone).font(.system(size: 12, weight: .semibold)).foregroundColor(SaberesCor.azul)
-            Text(texto).font(.custom("Saberes-Medium", size: 12.5)).foregroundColor(Color(red: 1/255, green: 75/255, blue: 103/255))
+            Text(texto)
+                .font(.custom("Saberes-Medium", size: 12.5))
+                .foregroundColor(Color(red: 1/255, green: 75/255, blue: 103/255))
                 .lineLimit(1).minimumScaleFactor(0.8)
         }
         .padding(.horizontal, 10).padding(.vertical, 7)

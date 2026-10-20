@@ -343,7 +343,7 @@
 		3B74C6685E416657F3C5F5A8 /* Pods-App-Core.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Core.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-Core/Pods-App-Core.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		3C63D5D2247C793C259341B8 /* Pods-App-Core-CoreTests.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Core-CoreTests.releasedev.xcconfig"; path = "Target Support Files/Pods-App-Core-CoreTests/Pods-App-Core-CoreTests.releasedev.xcconfig"; sourceTree = "<group>"; };
 		5CEFA8766C44C519B86C681D /* Pods-App-Core-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Core-CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-App-Core-CoreTests/Pods-App-Core-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5EC94860A85BED53FDE966CF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5E234211B7ECD39908246D15 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		60153262DBC2F9E660D7E11B /* Pods-App-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Core.release.xcconfig"; path = "Target Support Files/Pods-App-Core/Pods-App-Core.release.xcconfig"; sourceTree = "<group>"; };
 		8F3B171E9FA5E6F40B4890A8 /* Pods-App-Core-CoreTests.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Core-CoreTests.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Core-CoreTests/Pods-App-Core-CoreTests.debugstage.xcconfig"; sourceTree = "<group>"; };
 		90D63D7E70B8F5027A211EA3 /* Pods-CoreTests.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTests.debugprod.xcconfig"; path = "Target Support Files/Pods-CoreTests/Pods-CoreTests.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -1335,7 +1335,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0770DE5C28D0B209006D8A5D /* en */,
-				5EC94860A85BED53FDE966CF /* pt-BR */,
+				5E234211B7ECD39908246D15 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
