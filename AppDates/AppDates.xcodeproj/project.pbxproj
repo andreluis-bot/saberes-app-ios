@@ -60,7 +60,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0FE6429CAFF3572C5BACE7CF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		123278802021B24B608B2BBC /* Pods-App-AppDates.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.releasedev.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.releasedev.xcconfig"; sourceTree = "<group>"; };
 		14161693326A93866BB01A36 /* Pods-App-AppDates-AppDatesTests.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates-AppDatesTests.releasestage.xcconfig"; path = "Target Support Files/Pods-App-AppDates-AppDatesTests/Pods-App-AppDates-AppDatesTests.releasestage.xcconfig"; sourceTree = "<group>"; };
 		200A76876806F62C2118F49E /* Pods-App-AppDates-AppDatesTests.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates-AppDatesTests.debugdev.xcconfig"; path = "Target Support Files/Pods-App-AppDates-AppDatesTests/Pods-App-AppDates-AppDatesTests.debugdev.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		7F010B137D29C820343761A9 /* Pods-App-AppDates.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.debugdev.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.debugdev.xcconfig"; sourceTree = "<group>"; };
 		8CE12953BBB7F7C65675973B /* Pods_App_AppDates_AppDatesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_AppDates_AppDatesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2984D28B27605D024FE0AC /* Pods_App_AppDates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_AppDates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3144822AB1CF489E9235680 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A3F5B654743233E0EBF20ACE /* Pods-App-AppDates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.debug.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.debug.xcconfig"; sourceTree = "<group>"; };
 		A4FF28047F07A8E553DD3C3F /* Pods-App-AppDates.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppDates.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-AppDates/Pods-App-AppDates.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		A5B4681E2F2A1101002A4ECA /* AppDatesMocks.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatesMocks.generated.swift; sourceTree = "<group>"; };
@@ -521,7 +521,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE86499E2DA57A1C00821EC9 /* en */,
-				0FE6429CAFF3572C5BACE7CF /* pt-BR */,
+				A3144822AB1CF489E9235680 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

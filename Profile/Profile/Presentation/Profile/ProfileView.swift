@@ -10,6 +10,7 @@ import Core
 import Kingfisher
 import Theme
 import OEXFoundation
+import Swinject
 
 public struct ProfileView: View {
     
@@ -149,9 +150,49 @@ public struct ProfileView: View {
                 }.padding(.all, 24)
                 profileInfo
                 editProfileButton
+                saberesSairButton
                 Spacer()
             }
         }
+    }
+
+    // MARK: - Saberes (pedido 161): “Sair da conta” visível no Perfil
+    // No app oficial a saída fica em Perfil › engrenagem › Configurações › fim da lista. Mesma confirmação e mesma
+    // rotina de saída das Configurações (SettingsViewModel.logOut), pelo contêiner de dependências do app.
+    private var saberesSairButton: some View {
+        Button(action: {
+            viewModel.router.presentView(transitionStyle: .crossDissolve, animated: true) {
+                AlertView(
+                    alertTitle: ProfileLocalization.LogoutAlert.title,
+                    alertMessage: ProfileLocalization.LogoutAlert.text,
+                    positiveAction: CoreLocalization.Alert.accept,
+                    onCloseTapped: { viewModel.router.dismiss(animated: true) },
+                    firstButtonTapped: {
+                        viewModel.router.dismiss(animated: true)
+                        Task {
+                            if let sair = Container.shared.resolve(SettingsViewModel.self) {
+                                await sair.logOut()
+                            }
+                        }
+                    },
+                    type: .logOut
+                )
+            }
+        }, label: {
+            HStack {
+                Text(ProfileLocalization.logout)
+                Spacer()
+                Image(systemName: "rectangle.portrait.and.arrow.right")
+            }
+            .font(Theme.Fonts.labelLarge)
+            .padding(.horizontal, 16)
+            .frame(minHeight: 48)
+        })
+        .foregroundColor(Theme.Colors.alert)
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.Colors.alert, lineWidth: 1.5))
+        .padding(.horizontal, 24)
+        .padding(.top, 12)
+        .accessibilityIdentifier("saberes_sair_button")
     }
 
     // MARK: - Profile Info
