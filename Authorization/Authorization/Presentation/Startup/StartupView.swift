@@ -22,119 +22,156 @@ public struct StartupView: View {
         self.viewModel = viewModel
     }
     
+    // Saberes (pedido 150 — protótipo aprovado em 15/10/2026, igual ao Android SaberesBoasVindas.kt): colagem com capas
+    // dos cursos sobre o azul-escuro, “Grátis”, título, selos e os três caminhos (criar conta, entrar, ver os cursos).
+    // Patch saberes-ios/patches/boas-vindas.patch; as imagens saberesCapa1–3/saberesLogoBranco vêm do aplicar.sh.
     public var body: some View {
-        ZStack(alignment: .top) {
-            VStack(alignment: .leading) {
-                ThemeAssets.appLogo.swiftUIImage
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: 189, maxHeight: 89)
-                    .padding(.top, isHorizontal ? 20 : 40)
-                    .padding(.bottom, isHorizontal ? 0 : 20)
-                    .padding(.horizontal, isHorizontal ? 10 : 24)
-                    .colorMultiply(Theme.Colors.accentColor)
-                    .accessibilityIdentifier("logo_image")
-                
-                VStack {
-                    VStack(alignment: .leading) {
-                        Text(AuthLocalization.Startup.infoMessage)
-                            .font(Theme.Fonts.titleLarge)
-                            .foregroundColor(Theme.Colors.textPrimary)
-                            .padding(.bottom, isHorizontal ? 10 : 20 )
+        GeometryReader { tela in
+            ScrollView {
+                VStack(spacing: 0) {
+                    saberesColagem(largura: tela.size.width)
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Comida é direito. Aprenda a defendê-lo.")
+                            .font(.custom("Saberes-Bold", size: 30))
+                            .foregroundColor(SaberesCor.tinta)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .accessibilityAddTraits(.isHeader)
                             .accessibilityIdentifier("heading_text")
-                        
-                        Text(AuthLocalization.Startup.searchTitle)
-                            .font(Theme.Fonts.bodyLarge)
-                            .bold()
-                            .foregroundColor(Theme.Colors.textPrimary)
-                            .padding(.top, isHorizontal ? 0 : 24)
-                            .accessibilityIdentifier("search_title_text")
-                        
-                        HStack(spacing: 11) {
-                            Image(systemName: "magnifyingglass")
-                                .padding(.leading, 16)
-                                .padding(.top, 1)
-                                .foregroundColor(Theme.Colors.textInputTextColor)
-                            TextField("", text: $viewModel.searchQuery, onCommit: {
-                                if viewModel.searchQuery.isEmpty { return }
-                                viewModel.router.showDiscoveryScreen(
-                                    searchQuery: viewModel.searchQuery,
-                                    sourceScreen: .startup
-                                )
-                                viewModel.logAnalytics(searchQuery: viewModel.searchQuery)
-                            })
-                            .autocapitalization(.none)
-                            .autocorrectionDisabled()
-                            .frame(minHeight: 50)
-                            .submitLabel(.search)
-                            .font(Theme.Fonts.bodyLarge)
-                            .foregroundColor(Theme.Colors.textInputTextColor)
-                            .accessibilityIdentifier("explore_courses_textfield")
-                            
-                        }.overlay(
-                            Theme.Shapes.textInputShape
-                                .stroke(lineWidth: 1)
-                                .fill(Theme.Colors.textInputStroke)
-                        )
-                        .background(
-                            Theme.InputFieldBackground(
-                                placeHolder: AuthLocalization.Startup.searchPlaceholder,
-                                text: viewModel.searchQuery,
-                                padding: 48
-                            )
-                        )
-                        
+                        Text("Cursos gratuitos da UNESP sobre Segurança Alimentar e Nutricional, no seu ritmo e com certificado.")
+                            .font(.custom("Saberes-Regular", size: 15))
+                            .foregroundColor(SaberesCor.textoSuave)
+                            .lineSpacing(4)
+                            .fixedSize(horizontal: false, vertical: true)
+                        HStack(spacing: 8) {
+                            saberesSelo("Certificado", icone: "rosette")
+                            saberesSelo("3 a 6 horas", icone: "clock")
+                            saberesSelo("No celular", icone: "iphone")
+                        }
+                        .padding(.bottom, 8)
                         Button {
-                            viewModel.router.showDiscoveryScreen(
-                                searchQuery: viewModel.searchQuery,
-                                sourceScreen: .startup
-                            )
+                            viewModel.router.showRegisterScreen(sourceScreen: .startup)
+                        } label: {
+                            Text("Criar conta grátis")
+                                .font(.custom("Saberes-Bold", size: 17))
+                                .foregroundColor(SaberesCor.tinta)
+                                .frame(maxWidth: .infinity, minHeight: 56)
+                                .background(SaberesCor.ambar)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                        }
+                        .accessibilityIdentifier("logistration_register_button")
+                        Button {
+                            viewModel.router.showLoginScreen(sourceScreen: .startup)
+                        } label: {
+                            Text("Já tenho conta")
+                                .font(.custom("Saberes-SemiBold", size: 16))
+                                .foregroundColor(SaberesCor.azul)
+                                .frame(maxWidth: .infinity, minHeight: 54)
+                                .background(Color.white)
+                                .overlay(RoundedRectangle(cornerRadius: 16).stroke(SaberesCor.azul, lineWidth: 1.5))
+                        }
+                        .accessibilityIdentifier("logistration_signin_button")
+                        Button {
+                            viewModel.router.showDiscoveryScreen(searchQuery: "", sourceScreen: .startup)
                             viewModel.logAnalytics()
                         } label: {
-                            Text(AuthLocalization.Startup.exploreAllCourses)
-                                .underline()
-                                .foregroundColor(Theme.Colors.infoColor)
-                                .font(Theme.Fonts.bodyLarge)
+                            HStack(spacing: 6) {
+                                Text("Ver os cursos antes de entrar")
+                                    .font(.custom("Saberes-Medium", size: 14))
+                                Image(systemName: "arrow.right").font(.system(size: 15, weight: .semibold))
+                            }
+                            .foregroundColor(SaberesCor.azul)
+                            .frame(maxWidth: .infinity, minHeight: 44)
                         }
-                        .padding(.top, isHorizontal ? 0 : 5)
                         .accessibilityIdentifier("explore_courses_button")
-                        Spacer()
                     }
-                    .padding(.horizontal, isHorizontal ? 10 : 24)
-                    
-                    LogistrationBottomView(
-                        ssoEnabled: viewModel.config.uiComponents.samlSSOLoginEnabled
-                    ) { buttonAction in
-                        switch buttonAction {
-                        case .signIn:
-                            viewModel.router.showLoginScreen(sourceScreen: .startup)
-                        case .signInWithSSO:
-                            viewModel.router.showLoginScreen(sourceScreen: .startup)
-                        case .register:
-                            viewModel.router.showRegisterScreen(sourceScreen: .startup)
-                        }
-                    }
+                    .padding(.horizontal, 24)
+                    .padding(.top, 28)
+                    .padding(.bottom, 20)
+                    .frame(maxWidth: .infinity, minHeight: max(420, tela.size.height - 360), alignment: .top)
+                    .background(
+                        // só os cantos de cima arredondados (os de baixo ficam fora da tela)
+                        RoundedRectangle(cornerRadius: 32)
+                            .fill(Color.white)
+                            .padding(.bottom, -40)
+                    )
                 }
-                .padding(.top, 10)
-                .padding(.bottom, 2)
+                .frame(maxWidth: 600)
+                .frame(maxWidth: .infinity)
             }
-            .onDisappear {
-                viewModel.searchQuery = ""
-            }
-            .frameLimit()
         }
         .navigationTitle(AuthLocalization.Startup.title)
         .navigationBarHidden(true)
-        .padding(.all, isHorizontal ? 1 : 0)
-        .background(Theme.Colors.background.ignoresSafeArea(.all))
-        .ignoresSafeArea(.keyboard, edges: .bottom)
-        .onTapGesture {
-            UIApplication.shared.endEditing()
-        }
+        .background(
+            VStack(spacing: 0) {
+                SaberesCor.tinta
+                Color.white
+            }
+            .ignoresSafeArea()
+        )
+        .environment(\.colorScheme, .light)
         .onFirstAppear {
             viewModel.trackScreenEvent()
         }
     }
+
+    // posições do protótipo (390 pt de largura), em escala
+    private func saberesColagem(largura: CGFloat) -> some View {
+        let k = min(largura, 600) / 390
+        return ZStack(alignment: .topLeading) {
+            SaberesCor.tinta
+            Image("saberesLogoBranco")
+                .resizable().scaledToFit()
+                .frame(width: 128)
+                .offset(x: 24, y: 12)
+                .accessibilityLabel("Saberes INTERSSAN.org")
+            saberesCapa("saberesCapa1", x: 24 * k, y: 70, largura: 200 * k, altura: 136, giro: -4)
+            saberesCapa("saberesCapa2", x: 196 * k, y: 56, largura: 178 * k, altura: 122, giro: 5)
+            saberesCapa("saberesCapa3", x: 112 * k, y: 188, largura: 204 * k, altura: 140, giro: -1)
+                .shadow(color: .black.opacity(0.35), radius: 14, y: 8)
+            HStack(spacing: 6) {
+                Image(systemName: "checkmark").font(.system(size: 13, weight: .bold))
+                Text("Grátis").font(.custom("Saberes-Bold", size: 13))
+            }
+            .foregroundColor(SaberesCor.tinta)
+            .padding(.horizontal, 12).padding(.vertical, 8)
+            .background(Capsule().fill(SaberesCor.ambar))
+            .shadow(color: .black.opacity(0.25), radius: 6, y: 3)
+            .offset(x: 262 * k, y: 172)
+        }
+        .frame(height: 360)
+        .clipped()
+    }
+
+    private func saberesCapa(_ nome: String, x: CGFloat, y: CGFloat, largura: CGFloat, altura: CGFloat,
+                             giro: Double) -> some View {
+        Image(nome)
+            .resizable().scaledToFill()
+            .frame(width: largura, height: altura)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .rotationEffect(.degrees(giro))
+            .offset(x: x, y: y)
+            .accessibilityHidden(true)
+    }
+
+    private func saberesSelo(_ texto: String, icone: String) -> some View {
+        HStack(spacing: 5) {
+            Image(systemName: icone).font(.system(size: 12, weight: .semibold)).foregroundColor(SaberesCor.azul)
+            Text(texto).font(.custom("Saberes-Medium", size: 12.5)).foregroundColor(Color(red: 1/255, green: 75/255, blue: 103/255))
+                .lineLimit(1).minimumScaleFactor(0.8)
+        }
+        .padding(.horizontal, 10).padding(.vertical, 7)
+        .background(Capsule().fill(SaberesCor.azulClaro))
+        .accessibilityElement(children: .combine)
+    }
+}
+
+// cores do Saberes (as mesmas do Android, SaberesUi.kt)
+enum SaberesCor {
+    static let tinta = Color(red: 10/255, green: 42/255, blue: 56/255)        // #0A2A38
+    static let azul = Color(red: 1/255, green: 99/255, blue: 135/255)         // #016387
+    static let azulClaro = Color(red: 227/255, green: 241/255, blue: 245/255) // #E3F1F5
+    static let ambar = Color(red: 246/255, green: 174/255, blue: 47/255)      // #F6AE2F
+    static let textoSuave = Color(red: 61/255, green: 79/255, blue: 87/255)   // #3D4F57
 }
 
 #if DEBUG

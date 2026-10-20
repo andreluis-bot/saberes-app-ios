@@ -1,5 +1,5 @@
-"SIGN_IN.LOG_IN_TITLE" = "Entrar";
-"SIGN_IN.WELCOME_BACK" = "Bem-vindo(a) de volta! Faça login para acessar seus cursos.";
+"SIGN_IN.LOG_IN_TITLE" = "Que bom ter você aqui";
+"SIGN_IN.WELCOME_BACK" = "Entre com a mesma conta do site. Seu progresso e seus certificados vão junto.";
 "SIGN_IN.EMAIL" = "E-mail";
 "SIGN_IN.EMAIL_OR_USERNAME" = "E-mail ou nome de usuário";
 "SIGN_IN.PASSWORD" = "Senha";

@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="N54-4c-KWq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saberesAbertura" translatesAutoresizingMaskIntoConstraints="NO" id="N54-4c-KWq">
                                 <rect key="frame" x="146.5" y="394.5" width="121" height="121"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="cja-fs-EVG"/>
-                                    <constraint firstAttribute="height" constant="121" id="mrO-2w-c71"/>
+                                    <constraint firstAttribute="width" constant="200" id="cja-fs-EVG"/>
+                                    <constraint firstAttribute="height" constant="200" id="mrO-2w-c71"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -40,9 +40,9 @@
     </scenes>
     <color key="tintColor" name="SplashBackground"/>
     <resources>
-        <image name="appLogo" width="171" height="48"/>
+        <image name="saberesAbertura" width="200" height="200"/>
         <namedColor name="SplashBackground">
-            <color red="0.31764705882352939" green="0.4823529411764706" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0392" green="0.1647" blue="0.2196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -10,6 +10,7 @@ import Core
 import OEXFoundation
 import Theme
 import Swinject
+import Kingfisher
 
 public struct PrimaryCourseDashboardView<ProgramView: View>: View {
     
@@ -58,7 +59,12 @@ public struct PrimaryCourseDashboardView<ProgramView: View>: View {
                             } else {
                                 LazyVStack(spacing: 0) {
                                         if let enrollments = viewModel.enrollments {
-                                            if let primary = enrollments.primaryCourse {
+                                            if idiom != .pad {
+                                                saberesCabecalho(enrollments)
+                                            }
+                                            if let primary = enrollments.primaryCourse, idiom != .pad {
+                                                saberesContinuar(primary)
+                                            } else if let primary = enrollments.primaryCourse {
                                                 PrimaryCardView(
                                                     courseName: primary.name,
                                                     org: primary.org,
@@ -286,6 +292,144 @@ public struct PrimaryCourseDashboardView<ProgramView: View>: View {
         })
     }
     
+    // MARK: - Saberes (pedido 150, parte 2 — igual ao Android SaberesInicio.kt / SaberesContinuar.kt; patch inicio.patch)
+
+    // (calculadas: tipo genérico não aceita propriedade estática guardada)
+    private static var tinta: Color { Color(red: 10/255, green: 42/255, blue: 56/255) }    // #0A2A38
+    private static var ambar: Color { Color(red: 246/255, green: 174/255, blue: 47/255) }  // #F6AE2F
+
+    private func saberesAbrir(_ primary: PrimaryCourse, ultimaAula: String?) {
+        viewModel.router.showCourseScreens(
+            courseID: primary.courseID,
+            hasAccess: primary.hasAccess,
+            courseStart: primary.courseStart,
+            courseEnd: primary.courseEnd,
+            enrollmentStart: nil,
+            enrollmentEnd: nil,
+            title: primary.name,
+            courseRawImage: primary.courseBanner,
+            showDates: false,
+            lastVisitedBlockID: ultimaAula
+        )
+    }
+
+    /// Saudação pelo horário com o primeiro nome e três contadores. O app iOS não recebe os certificados na lista de
+    /// cursos (o Android recebe), então o terceiro contador é “em andamento”.
+    private func saberesCabecalho(_ enrollments: PrimaryEnrollment) -> some View {
+        let nome = (viewModel.storage.user?.name ?? "").split(separator: " ").first.map(String.init) ?? ""
+        let hora = Calendar.current.component(.hour, from: Date())
+        let saudacao = hora < 5 ? "Boa noite" : hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite"
+        var progresso = enrollments.courses.map { ($0.progressEarned, $0.progressPossible) }
+        if let p = enrollments.primaryCourse { progresso.append((p.progressEarned, p.progressPossible)) }
+        let total = enrollments.count + (enrollments.primaryCourse == nil ? 0 : 1)
+        let concluidos = progresso.filter { $0.1 > 0 && $0.0 >= $0.1 }.count
+        let andamento = progresso.filter { $0.0 > 0 && $0.0 < $0.1 }.count
+        return VStack(alignment: .leading, spacing: 14) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(nome.isEmpty ? "\(saudacao)!" : "\(saudacao),")
+                    .font(.custom("Saberes-Regular", size: 14))
+                    .foregroundColor(Theme.Colors.textSecondary)
+                if !nome.isEmpty {
+                    Text(nome)
+                        .font(.custom("Saberes-Bold", size: 26))
+                        .foregroundColor(Theme.Colors.textPrimary)
+                }
+            }
+            .accessibilityElement(children: .combine)
+            HStack(spacing: 10) {
+                saberesContador(total, total == 1 ? "curso" : "cursos",
+                                Color(red: 62/255, green: 155/255, blue: 91/255))
+                saberesContador(concluidos, concluidos == 1 ? "concluído" : "concluídos", Self.ambar)
+                saberesContador(andamento, "em andamento", Color(red: 1/255, green: 99/255, blue: 135/255))
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 20)
+        .padding(.top, 8)
+        .padding(.bottom, 16)
+    }
+
+    private func saberesContador(_ n: Int, _ rotulo: String, _ cor: Color) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            RoundedRectangle(cornerRadius: 4).fill(cor).frame(width: 24, height: 4).padding(.top, 4)
+            Text("\(n)")
+                .font(.custom("Saberes-Bold", size: 20))
+                .foregroundColor(Theme.Colors.textPrimary)
+            Text(rotulo)
+                .font(.custom("Saberes-Medium", size: 12))
+                .foregroundColor(Theme.Colors.textSecondary)
+                .lineLimit(1).minimumScaleFactor(0.8)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 14)
+        .background(RoundedRectangle(cornerRadius: 18).fill(Theme.Colors.cardViewBackground))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(n) \(rotulo)")
+    }
+
+    /// Cartão escuro “Continue de onde parou”: capa, nome, barra de progresso e botão âmbar.
+    private func saberesContinuar(_ primary: PrimaryCourse) -> some View {
+        let pct = primary.progressPossible > 0
+            ? min(100, max(0, 100 * primary.progressEarned / primary.progressPossible)) : 0
+        let comecou = primary.lastVisitedBlockID != nil
+        return VStack(alignment: .leading, spacing: 0) {
+            ZStack(alignment: .topLeading) {
+                KFImage(URL(string: primary.courseBanner))
+                    .placeholder { Self.tinta }
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 148)
+                    .frame(maxWidth: .infinity)
+                    .clipped()
+                    .accessibilityHidden(true)
+                Text(comecou ? "Continue de onde parou" : "Comece por aqui")
+                    .font(.custom("Saberes-Medium", size: 12))
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 10).padding(.vertical, 6)
+                    .background(Capsule().fill(Self.tinta.opacity(0.82)))
+                    .padding(14)
+            }
+            VStack(alignment: .leading, spacing: 12) {
+                Text(primary.name)
+                    .font(.custom("Saberes-SemiBold", size: 18))
+                    .foregroundColor(.white)
+                    .lineLimit(3)
+                HStack(spacing: 12) {
+                    GeometryReader { g in
+                        ZStack(alignment: .leading) {
+                            Capsule().fill(Color(red: 28/255, green: 69/255, blue: 86/255))
+                            Capsule().fill(Self.ambar).frame(width: g.size.width * CGFloat(pct) / 100)
+                        }
+                    }
+                    .frame(height: 8)
+                    Text("\(pct)%")
+                        .font(.custom("Saberes-Medium", size: 13))
+                        .foregroundColor(.white)
+                }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("\(pct)% concluído")
+                Button {
+                    saberesAbrir(primary, ultimaAula: primary.lastVisitedBlockID)
+                } label: {
+                    Text(comecou ? "Continuar aula  ▶" : "Começar o curso  ▶")
+                        .font(.custom("Saberes-Bold", size: 16))
+                        .foregroundColor(Self.tinta)
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .background(RoundedRectangle(cornerRadius: 14).fill(Self.ambar))
+                }
+                .accessibilityIdentifier("saberes_continuar_button")
+            }
+            .padding(16)
+        }
+        .background(Self.tinta)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
+        .contentShape(RoundedRectangle(cornerRadius: 24))
+        .onTapGesture { saberesAbrir(primary, ultimaAula: nil) }
+        .padding(.horizontal, 20)
+        .padding(.bottom, 8)
+    }
+
     private func learnTitleAndSearch(proxy: GeometryProxy) -> some View {
         let showDropdown = viewModel.config.program.enabled && viewModel.config.program.isWebViewConfigured
        return ZStack(alignment: .top) {

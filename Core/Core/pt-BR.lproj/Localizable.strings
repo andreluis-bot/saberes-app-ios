@@ -1,9 +1,9 @@
-"MAINSCREEN.DISCOVERY" = "Descobrir";
+"MAINSCREEN.DISCOVERY" = "Cursos";
 "MAINSCREEN.DASHBOARD" = "Painel De Controle";
 "MAINSCREEN.IN_DEVELOPING" = "Em desenvolvimento";
 "MAINSCREEN.PROGRAMS" = "Programas";
 "MAINSCREEN.PROFILE" = "Perfil";
-"MAINSCREEN.LEARN" = "Aprender";
+"MAINSCREEN.LEARN" = "Início";
 "MAINSCREEN.SOCIAL_REGISTER_BANNER" = "Você já tinha uma conta no %@ ligada à sua conta %@ e entrou com ela.";
 "VIEW.SNACKBAR.TRY_AGAIN_BTN" = "Tente novamente";
 "ERROR.INVALID_CREDENTIALS" = "Credenciais inválidas";

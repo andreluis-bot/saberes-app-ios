@@ -160,12 +160,12 @@
 		1DF890C9EF8CFBC7610676BF /* Pods-App-Discussion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion.release.xcconfig"; path = "Target Support Files/Pods-App-Discussion/Pods-App-Discussion.release.xcconfig"; sourceTree = "<group>"; };
 		2F4E0FCAD2C351B8C3DCE0DA /* Pods-App-Discussion-DiscussionTests.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion-DiscussionTests.debugprod.xcconfig"; path = "Target Support Files/Pods-App-Discussion-DiscussionTests/Pods-App-Discussion-DiscussionTests.debugprod.xcconfig"; sourceTree = "<group>"; };
 		307AD0C3C81316D6B0C04178 /* Pods-App-Discussion-DiscussionTests.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion-DiscussionTests.debugdev.xcconfig"; path = "Target Support Files/Pods-App-Discussion-DiscussionTests/Pods-App-Discussion-DiscussionTests.debugdev.xcconfig"; sourceTree = "<group>"; };
+		36AD4B35832E1325E6AD89CE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4D6EE7EAA4004C3BE8757E3E /* Pods-App-Discussion-DiscussionTests.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion-DiscussionTests.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Discussion-DiscussionTests/Pods-App-Discussion-DiscussionTests.debugstage.xcconfig"; sourceTree = "<group>"; };
 		55A6A0C34167EFFA9736A83E /* Pods-App-Discussion-DiscussionTests.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion-DiscussionTests.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-Discussion-DiscussionTests/Pods-App-Discussion-DiscussionTests.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		59F3BBE6ACFA3C87C2294DA0 /* Pods-App-Discussion-DiscussionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion-DiscussionTests.release.xcconfig"; path = "Target Support Files/Pods-App-Discussion-DiscussionTests/Pods-App-Discussion-DiscussionTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F59EC4433FF0AE0743D284D /* Pods-App-Discussion.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-Discussion/Pods-App-Discussion.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		66A7A0375EDDEB8948165EAD /* Pods_App_Discussion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Discussion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		859447F3A89DC6C4D2F81D83 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A55CEBCC51BDC30B8354E258 /* Pods-App-Discussion.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion.debugprod.xcconfig"; path = "Target Support Files/Pods-App-Discussion/Pods-App-Discussion.debugprod.xcconfig"; sourceTree = "<group>"; };
 		A5B4681B2F2A0EFD002A4ECA /* DiscussionMocks.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionMocks.generated.swift; sourceTree = "<group>"; };
 		ACA8EF2DEDDB7695162C381A /* Pods-App-Discussion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discussion.debug.xcconfig"; path = "Target Support Files/Pods-App-Discussion/Pods-App-Discussion.debug.xcconfig"; sourceTree = "<group>"; };
@@ -799,7 +799,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0218196128F734CD00202564 /* en */,
-				859447F3A89DC6C4D2F81D83 /* pt-BR */,
+				36AD4B35832E1325E6AD89CE /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

@@ -91,9 +91,9 @@
 		AB8156676C9C771D691ADE07 /* Pods-App-WhatsNew.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		B7EAC5E8F0ED2F1F81050C30 /* Pods-App-WhatsNew-WhatsNewTests.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.debugprod.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.debugprod.xcconfig"; sourceTree = "<group>"; };
 		E905D28DCAA1940E08C96896 /* Pods-App-WhatsNew-WhatsNewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.debug.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE154D708DABBACE3DF7C2E5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F71207762CEF1763A08C7151 /* Pods-App-WhatsNew-WhatsNewTests.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.debugdev.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.debugdev.xcconfig"; sourceTree = "<group>"; };
 		F8D1A5DF016EC4630637336C /* Pods_App_WhatsNew_WhatsNewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_WhatsNew_WhatsNewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FADA49A496E8F0F9F17C29F1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,7 +484,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02E6407D2ADFF6250079AEDA /* en */,
-				EE154D708DABBACE3DF7C2E5 /* pt-BR */,
+				FADA49A496E8F0F9F17C29F1 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
