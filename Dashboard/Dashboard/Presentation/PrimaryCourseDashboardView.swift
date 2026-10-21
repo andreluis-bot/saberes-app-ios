@@ -242,6 +242,17 @@ public struct PrimaryCourseDashboardView<ProgramView: View>: View {
                     showProgress: false,
                     useRelativeDates: useRelativeDates
                 ).frame(width: idiom == .pad ? nil : 120)
+                // Saberes (pedido 198): selo de demonstração também nos cartões menores
+                .overlay(alignment: .topLeading) {
+                    if course.org.hasPrefix("Demonstração") {
+                        Text("DEMONSTRAÇÃO")
+                            .font(.custom("Saberes-Bold", size: 9))
+                            .foregroundColor(Self.tinta)
+                            .padding(.horizontal, 7).padding(.vertical, 3)
+                            .background(Capsule().fill(Self.ambar))
+                            .padding(6)
+                    }
+                }
             }
             )
             .accessibilityIdentifier("course_item")
