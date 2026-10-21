@@ -390,6 +390,16 @@ public struct PrimaryCourseDashboardView<ProgramView: View>: View {
                     .padding(.horizontal, 10).padding(.vertical, 6)
                     .background(Capsule().fill(Self.tinta.opacity(0.82)))
                     .padding(14)
+                // curso de demonstração (o servidor marca o org: app_movel_api.py, pedido 182)
+                if primary.org.hasPrefix("Demonstração") {
+                    Text("DEMONSTRAÇÃO")
+                        .font(.custom("Saberes-Bold", size: 11))
+                        .foregroundColor(Self.tinta)
+                        .padding(.horizontal, 10).padding(.vertical, 6)
+                        .background(Capsule().fill(Self.ambar))
+                        .padding(14)
+                        .frame(maxWidth: .infinity, alignment: .topTrailing)
+                }
             }
             VStack(alignment: .leading, spacing: 12) {
                 Text(primary.name)

@@ -283,7 +283,6 @@
 		A5A510A32E6728AD00553607 /* CourseAssignmentsCarouselSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAssignmentsCarouselSlideView.swift; sourceTree = "<group>"; };
 		A5A510A52E672E4A00553607 /* AssignmentCarouselDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCarouselDetailCardView.swift; sourceTree = "<group>"; };
 		A5B468122F29DCA3002A4ECA /* CourseMocks.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMocks.generated.swift; sourceTree = "<group>"; };
-		A789428AB1383B463820ECA4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ADC2A1B8183A674705F5F7E2 /* Pods-App-Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.debug.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.debug.xcconfig"; sourceTree = "<group>"; };
 		B196A14555D0E006995A5683 /* Pods-App-CourseDetails.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CourseDetails.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-CourseDetails/Pods-App-CourseDetails.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		BA58CF5C2B3D804D005B102E /* CourseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStorage.swift; sourceTree = "<group>"; };
@@ -336,6 +335,7 @@
 		DB7D6EAB2ADFCAC40036BB13 /* CourseDatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDatesView.swift; sourceTree = "<group>"; };
 		DB7D6EAD2ADFCB4A0036BB13 /* CourseDatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDatesViewModel.swift; sourceTree = "<group>"; };
 		DBE05972CB5115D4535C6B8A /* Pods-App-Course-CourseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.debug.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E19041A0936F046EDB73E49A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E5E795BD160CDA7D9C120DE6 /* Pods_App_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BDAE887ED8A46860B3F6D3 /* Pods-App-Course-CourseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course-CourseTests.release.xcconfig"; path = "Target Support Files/Pods-App-Course-CourseTests/Pods-App-Course-CourseTests.release.xcconfig"; sourceTree = "<group>"; };
 		E954A304FDC0409BEC34C125 /* Pods-App-Course.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Course.debugprod.xcconfig"; path = "Target Support Files/Pods-App-Course/Pods-App-Course.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -1268,7 +1268,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02B6B3B328E1C49400232911 /* en */,
-				A789428AB1383B463820ECA4 /* pt-BR */,
+				E19041A0936F046EDB73E49A /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

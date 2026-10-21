@@ -159,8 +159,8 @@
 		CE1735032CD23D7A00F9606A /* DatesAndCalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesAndCalendarViewModelTests.swift; sourceTree = "<group>"; };
 		CE73457229781A6300B55797 /* ProfileMocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMocks.generated.swift; sourceTree = "<group>"; };
 		CE961F022CD163FD00799B9F /* CalendarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
+		EB934E2FB20E7C3D5069AA97 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F52EFE7DC07BE68B9A302DAF /* Pods-App-Profile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Profile.debug.xcconfig"; path = "Target Support Files/Pods-App-Profile/Pods-App-Profile.debug.xcconfig"; sourceTree = "<group>"; };
-		F7AF47D4B95403FAC414E720 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FB33709D5DBACDEA33BD016F /* Pods-App-Profile-ProfileTests.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Profile-ProfileTests.debugstage.xcconfig"; path = "Target Support Files/Pods-App-Profile-ProfileTests/Pods-App-Profile-ProfileTests.debugstage.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -752,7 +752,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				021D926028DDADE600ACC565 /* en */,
-				F7AF47D4B95403FAC414E720 /* pt-BR */,
+				EB934E2FB20E7C3D5069AA97 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
