@@ -125,10 +125,10 @@ public struct ProfileView: View {
             } else {
                 HStack(alignment: .center, spacing: 12) {
                     if let userModel = viewModel.userModel {
+                        // Saberes: a própria foto aparece sempre. O oficial a escondia com o perfil “limitado”,
+                        // e o Open edX marca como limitado todo perfil sem ano de nascimento (o Saberes não pede).
                         UserAvatar(
-                            url: userModel.isFullProfile
-                            ? userModel.avatarUrl
-                            : "",
+                            url: userModel.avatarUrl,
                             image: userModel.isFullProfile
                             ? $viewModel.updatedAvatar
                             : .constant(nil)
